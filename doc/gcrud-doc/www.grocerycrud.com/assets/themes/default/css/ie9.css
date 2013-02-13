@@ -1,0 +1,13 @@
+.cornered-box {
+	border-radius: 0px !important;
+}
+
+#main-navigation ul {
+	border-radius: 0px !important;
+}
+#main-navigation ul li.first {
+	border-radius: 0px !important;
+}
+#main-navigation ul li.last {
+	border-radius: 0px !important;
+}

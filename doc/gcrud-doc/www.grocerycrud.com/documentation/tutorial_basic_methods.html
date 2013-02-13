@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Tutorial - Basic methods | Grocery CRUD, a Codeigniter CRUD</title>
+	
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="resource-type" content="document" />
+		<meta name="robots" content="all, index, follow"/>
+		<meta name="googlebot" content="all, index, follow" /> 
+	
+		<link rel="canonical" href="tutorial_basic_methods.html" />
+			
+		<meta property="og:image" content="http://www.grocerycrud.com/assets/themes/default/images/logo-thumb.jpg"/>
+		<link rel="search" type="application/opensearchdescription+xml" href="http://www.grocerycrud.com/opensearch.xml" title="Grocery CRUD Search">
+		<link rel="image_src" href="http://www.grocerycrud.com/assets/themes/default/images/logo-thumb.jpg" />
+		<link rel="shortcut icon" href="http://www.grocerycrud.com/assets/themes/default/images/favicon.png" type="image/x-icon"/>
+	
+		<link rel="stylesheet" href="http://www.grocerycrud.com/assets/themes/default/css/cache_ab4ac083805f8fb812d927285c647948.css?8202130805" type="text/css" />
+	
+		<script src="http://www.grocerycrud.com/assets/themes/default/js/jquery-1.7.1.min.js?8202130805"></script>
+		
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!--[if IE 9]>
+			<link rel="stylesheet" href="http://www.grocerycrud.com/assets/themes/default/css/ie9.css" type="text/css" /
+		<![endif]-->
+	</head>
+<body>
+<div class="container" id='top'>
+		<header>
+			<div id="logo">
+				<a href="http://www.grocerycrud.com/">
+					<img src="http://d328ce9sgcu5lp.cloudfront.net/themes/default/images/logo.png" alt="grocery CRUD logo" width='248' height='119' itemprop="image" >
+				</a>
+			</div>
+			<div id='basic-menu'>
+			
+				<div id='header-top-right'>
+				</div>
+				<nav id="main-navigation">
+					<ul>
+						<li class='first'><a href="../examples.html">Examples</a></li>
+						<li class='current'><a href="../documentation.html">Documentation</a></li>
+						<li><a href="http://www.grocerycrud.com/downloads">Download</a></li>
+						<li><a href="http://www.grocerycrud.com/forums">Forum</a></li>
+						<li class='last'><a href="http://www.grocerycrud.com/donate">Donate</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class='clear'></div>
+			<div class="h20"></div>
+		</header>
+	</div>
+	    	
+     	<div class='default-line'>
+     		<div class="container">
+        		<div class="left-container pt10 no-border">
+                	<div class='home-grocery floatL'>
+                    	<a href='http://www.grocerycrud.com/'><img src="http://d328ce9sgcu5lp.cloudfront.net/assets/themes/default/images/home-grocery.png" alt='' /></a>
+                    </div>
+                	<ul id='breadcrumb'>
+<li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="../documentation.html" itemprop="url" ><span itemprop="title">Documentation</span></a>
+</li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="tutorial_basic_methods.html" itemprop="url" ><span itemprop="title">Tutorial - Basic methods</span></a>
+</li>                    </ul>
+                    <div class='clear'></div>
+                </div>
+	          <div class="right-container pt10">
+				<form action='/search' method='get'>
+					<div class='search-box'>
+						<div class='floatL'>
+							<input id='quick_search' name='q' type='text' value='Quick Search...' onclick="javascript: document.getElementById('quick_search').value = '';" onblur ="javascript: if(document.getElementById('quick_search').value == '') document.getElementById('quick_search').value = 'Quick Search...';" />
+						</div>
+						<div class='floatR'>
+							<input type='image' src="http://d328ce9sgcu5lp.cloudfront.net/assets/themes/default/images/quick-search-button.png" alt='' />
+						</div>
+						<div class='clear'></div>
+					</div>
+				</form>	
+			  </div>                  
+                <div class='clear'></div>
+     		</div>   		
+     	</div>
+		
+		 <div class="container">		
+        <section class='one-column-container pt10'>
+        		<div class='content'>
+					<h1>Tutorial - Basic methods</h1>
+	                 <div class="floatL">
+<a href="codeigniter_installation.html"><< grocery CRUD installation</a>
+</div>
+<div class="floatR"><a href="tutorial_basic_methods_2nd_part.html">Tutorial - Basic Methods (continue) >></a></div>
+<div class="clear"></div>
+<div class="h10"></div>
+<p>Many users understand the simplicity of using grocery CRUD but after installing it they don't actually know where to start. In this tutorial we will try to cover the basic functionality of grocery CRUD and a step by step tutorial of how using it.</p>
+<p>First of all make sure that you have already install grocery CRUD in your project by simply following the steps at <a href="www.grocerycrud.com/documentation/codeigniter_installation.html">grocery CRUD installation</a> or the <a href="create-crud-codeigniter-tutorial.html">newbies grocery CRUD installation guide</a></p>
+<p>Let's start with an example table to know exactly what we are expecting to have as a result. Let's say we have the below table:</p>
+<div class="code"><pre class="php">&nbsp;
+CREATE TABLE <span style="color: #b1b100;">IF</span> NOT EXISTS `employees` <span style="color: #66cc66;">&#40;</span>
+  `employeeNumber` int<span style="color: #66cc66;">&#40;</span><span style="color: #cc66cc;">11</span><span style="color: #66cc66;">&#41;</span> NOT <span style="color: #000000; font-weight: bold;">NULL</span> AUTO_INCREMENT,
+  `lastName` varchar<span style="color: #66cc66;">&#40;</span><span style="color: #cc66cc;">50</span><span style="color: #66cc66;">&#41;</span> NOT <span style="color: #000000; font-weight: bold;">NULL</span>,
+  `firstName` varchar<span style="color: #66cc66;">&#40;</span><span style="color: #cc66cc;">50</span><span style="color: #66cc66;">&#41;</span> NOT <span style="color: #000000; font-weight: bold;">NULL</span>,
+  `extension` varchar<span style="color: #66cc66;">&#40;</span><span style="color: #cc66cc;">10</span><span style="color: #66cc66;">&#41;</span> NOT <span style="color: #000000; font-weight: bold;">NULL</span>,
+  `email` varchar<span style="color: #66cc66;">&#40;</span><span style="color: #cc66cc;">100</span><span style="color: #66cc66;">&#41;</span> NOT <span style="color: #000000; font-weight: bold;">NULL</span>,
+  `officeCode` varchar<span style="color: #66cc66;">&#40;</span><span style="color: #cc66cc;">10</span><span style="color: #66cc66;">&#41;</span> NOT <span style="color: #000000; font-weight: bold;">NULL</span>,
+  `file_url` varchar<span style="color: #66cc66;">&#40;</span><span style="color: #cc66cc;">250</span><span style="color: #66cc66;">&#41;</span> CHARACTER SET utf8 NOT <span style="color: #000000; font-weight: bold;">NULL</span>,
+  `jobTitle` varchar<span style="color: #66cc66;">&#40;</span><span style="color: #cc66cc;">50</span><span style="color: #66cc66;">&#41;</span> NOT <span style="color: #000000; font-weight: bold;">NULL</span>,
+  PRIMARY <a href="http://www.php.net/key"><span style="color: #000066;">KEY</span></a> <span style="color: #66cc66;">&#40;</span>`employeeNumber`<span style="color: #66cc66;">&#41;</span>
+<span style="color: #66cc66;">&#41;</span> ENGINE=MyISAM  <span style="color: #000000; font-weight: bold;">DEFAULT</span> CHARSET=latin1 AUTO_INCREMENT=<span style="color: #cc66cc;">1703</span> ;
+&nbsp;</pre></div>
+
+<p>First of all we create our function at the controller. Let's say we have the controller Demo and we want to create our function <i>employees_example</i> so we will have something like this:</p>
+
+<div class="code"><pre class="php">&nbsp;
+<span style="color: #000000; font-weight: bold;">&lt;?php</span>  <span style="color: #b1b100;">if</span> <span style="color: #66cc66;">&#40;</span> ! <a href="http://www.php.net/defined"><span style="color: #000066;">defined</span></a><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'BASEPATH'</span><span style="color: #66cc66;">&#41;</span><span style="color: #66cc66;">&#41;</span> <a href="http://www.php.net/exit"><span style="color: #000066;">exit</span></a><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'No direct script access allowed'</span><span style="color: #66cc66;">&#41;</span>;
+&nbsp;
+<span style="color: #000000; font-weight: bold;">class</span> Demo <span style="color: #000000; font-weight: bold;">extends</span> CI_Controller <span style="color: #66cc66;">&#123;</span>
+&nbsp;
+    <span style="color: #000000; font-weight: bold;">function</span> __construct<span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span>
+    <span style="color: #66cc66;">&#123;</span>
+        parent::__construct<span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span>;
+&nbsp;
+        <span style="color: #0000ff;">$this</span>-&gt;<span style="color: #006600;">load</span>-&gt;<span style="color: #006600;">database</span><span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span>;
+&nbsp;
+    <span style="color: #66cc66;">&#125;</span>
+&nbsp;
+    <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">function</span> index<span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span>
+    <span style="color: #66cc66;">&#123;</span>
+&nbsp;
+    <span style="color: #66cc66;">&#125;</span>
+&nbsp;
+    <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">function</span> employees_example<span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span>
+    <span style="color: #66cc66;">&#123;</span>
+        <span style="color: #0000ff;">$crud</span> = <span style="color: #000000; font-weight: bold;">new</span> grocery_CRUD<span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span>;
+&nbsp;
+        <span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">set_table</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'employees'</span><span style="color: #66cc66;">&#41;</span>;
+        <span style="color: #0000ff;">$output</span> = <span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">render</span><span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span>;
+&nbsp;
+        <span style="color: #0000ff;">$this</span>-&gt;_example_output<span style="color: #66cc66;">&#40;</span><span style="color: #0000ff;">$output</span><span style="color: #66cc66;">&#41;</span>;                
+    <span style="color: #66cc66;">&#125;</span>
+&nbsp;
+    <span style="color: #000000; font-weight: bold;">function</span> _example_output<span style="color: #66cc66;">&#40;</span><span style="color: #0000ff;">$output</span> = <span style="color: #000000; font-weight: bold;">null</span><span style="color: #66cc66;">&#41;</span>
+&nbsp;
+    <span style="color: #66cc66;">&#123;</span>
+        <span style="color: #0000ff;">$this</span>-&gt;<span style="color: #006600;">load</span>-&gt;<span style="color: #006600;">view</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'our_template.php'</span>,<span style="color: #0000ff;">$output</span><span style="color: #66cc66;">&#41;</span>;    
+    <span style="color: #66cc66;">&#125;</span>    
+<span style="color: #66cc66;">&#125;</span>
+&nbsp;
+<span style="color: #808080; font-style: italic;">/* End of file main.php */</span>
+<span style="color: #808080; font-style: italic;">/* Location: ./application/controllers/main.php */</span><span style="color: #000000; font-weight: bold;">?&gt;</span>
+&nbsp;</pre></div>
+<h2 id="set-table">set_table</h2>
+<p>A good starting point is to have always a method like this:</p>
+
+<div class="code"><pre class="php">&nbsp;
+    <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">function</span> my_function_name<span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span>
+    <span style="color: #66cc66;">&#123;</span>
+        <span style="color: #0000ff;">$crud</span> = <span style="color: #000000; font-weight: bold;">new</span> grocery_CRUD<span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span>;
+&nbsp;
+        <span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">set_table</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'your_table_name'</span><span style="color: #66cc66;">&#41;</span>;
+        <span style="color: #0000ff;">$output</span> = <span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">render</span><span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span>;
+&nbsp;
+        <span style="color: #0000ff;">$this</span>-&gt;_example_output<span style="color: #66cc66;">&#40;</span><span style="color: #0000ff;">$output</span><span style="color: #66cc66;">&#41;</span>;                
+    <span style="color: #66cc66;">&#125;</span>
+&nbsp;</pre></div>
+
+<div class="tip">
+	As we can see at all our examples we use the $crud->function_name . We can also use grocery CRUD with the default library functionality of Codeigniter like this: $this->grocery_crud->function_name . 
+	Though it is not suggested as with $this->grocery_crud-> we can not have the autocomplete from our editor. So it is suggested to use our methods with the way that the examples are.
+</div>
+
+<p>So we can copy it easily and have a starting point to use grocery CRUD. In our example we first have to see the CRUD is rendered without any problem with the default functionality. 
+So when we will add those 4 simple lines of code at our project we will have a result that will look similar to this:
+</p>
+<p>
+	<img src="http://www.grocerycrud.com/assets/uploads/general/tutorial-image-1.png" alt="example-1"/>
+</p>
+
+<p>Now let's add our first record just to have at least one item to work with.</p>
+
+<div class="tip">
+	Always make sure that we have at least one primary key at our table. It is suggested to have your primary key as an auto increment. If you though don't have an auto-increment primary key at your table grocery CRUD will work as expected but you will not have some automaziations that grocery CRUD offers.
+</div>
+<h2 id="set-subject">set_subject</h2>
+<p>Now that we added our first record and we are ready to continue. Let's first start with the most common method</p>
+<div class="super"><div class="code"><pre class="php"><span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">set_subject</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'your_subject_name'</span><span style="color: #66cc66;">&#41;</span>;</pre></div></div>
+<p>So in our case we will have:</p>
+<div class="code"><pre class="php">&nbsp;
+    <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">function</span> employees_example<span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span>
+    <span style="color: #66cc66;">&#123;</span>
+        <span style="color: #0000ff;">$crud</span> = <span style="color: #000000; font-weight: bold;">new</span> grocery_CRUD<span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span>;
+&nbsp;
+        <span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">set_subject</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'Employee'</span><span style="color: #66cc66;">&#41;</span>;
+        <span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">set_table</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'employees'</span><span style="color: #66cc66;">&#41;</span>;
+        <span style="color: #0000ff;">$output</span> = <span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">render</span><span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span>;
+&nbsp;
+        <span style="color: #0000ff;">$this</span>-&gt;_example_output<span style="color: #66cc66;">&#40;</span><span style="color: #0000ff;">$output</span><span style="color: #66cc66;">&#41;</span>;                
+    <span style="color: #66cc66;">&#125;</span>
+&nbsp;</pre></div>
+
+<p>As we can easily see now ALL the "Record" strings are transformed to "Employees". So now for example we have: "Add Employee", "Edit Employee", "Delete Employee" , "Are you sure that you want to delete this Employee" and so on...</p>
+<h2 id="columns">columns</h2>
+<p>The second most common method is the:</p>
+<div class="super">
+<div class="code"><pre class="php"><span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">columns</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'field_name1'</span>,<span style="color: #ff0000;">'field_name2'</span>,<span style="color: #ff0000;">'field_name3'</span>,<span style="color: #ff0000;">'field_name4'</span><span style="color: #66cc66;">&#41;</span>;</pre></div>
+</div>
+<p>In our example we will use the:</p>
+<div class="code"><pre class="php"><span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">columns</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'lastName'</span>,<span style="color: #ff0000;">'firstName'</span>,<span style="color: #ff0000;">'email'</span>,<span style="color: #ff0000;">'jobTitle'</span><span style="color: #66cc66;">&#41;</span>;</pre></div>
+<p>So with this line of code we will have only 4 columns at <b>our list page</b> and not all the columns of the table. The add and edit form they will still have all the fields of the table without any problem.</p>
+<h2 id="fields">fields</h2>
+<p>However if we still want to have less fields than the table we can simply use:</p>
+<div class="super">
+<div class="code"><pre class="php"><span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">fields</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'field_name1'</span>,<span style="color: #ff0000;">'field_name2'</span>,<span style="color: #ff0000;">'field_name3'</span>,<span style="color: #ff0000;">'field_name4'</span><span style="color: #66cc66;">&#41;</span>;</pre></div>
+</div>
+<p>So in our case we will have:</p>
+<div class="code"><pre class="php">&nbsp;
+    <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">function</span> employees_example<span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span>
+    <span style="color: #66cc66;">&#123;</span>
+        <span style="color: #0000ff;">$crud</span> = <span style="color: #000000; font-weight: bold;">new</span> grocery_CRUD<span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span>;
+&nbsp;
+        <span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">set_table</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'employees'</span><span style="color: #66cc66;">&#41;</span>;
+        <span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">columns</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'lastName'</span>,<span style="color: #ff0000;">'firstName'</span>,<span style="color: #ff0000;">'email'</span>,<span style="color: #ff0000;">'jobTitle'</span><span style="color: #66cc66;">&#41;</span>;
+        <span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">fields</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'lastName'</span>,<span style="color: #ff0000;">'firstName'</span>,<span style="color: #ff0000;">'extension'</span>,<span style="color: #ff0000;">'email'</span>,<span style="color: #ff0000;">'jobTitle'</span><span style="color: #66cc66;">&#41;</span>;
+&nbsp;
+        <span style="color: #0000ff;">$output</span> = <span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">render</span><span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span>;
+&nbsp;
+        <span style="color: #0000ff;">$this</span>-&gt;_example_output<span style="color: #66cc66;">&#40;</span><span style="color: #0000ff;">$output</span><span style="color: #66cc66;">&#41;</span>;                
+    <span style="color: #66cc66;">&#125;</span>
+&nbsp;</pre></div>
+
+<div class="tip">
+The only basic difference between fields and columns is that the columns method is used only for the list page (datagrid) and the fields method is only used for CRUD forms.<br/><br/>
+</div>
+<h2 id="display-as">display_as</h2>
+<p>Till now every field has a default label of the database field. If you though want to change that you can simply use:</p>
+<div class="super">
+<div class="code"><pre class="php"><span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">display_as</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'field_name'</span>,<span style="color: #ff0000;">'field_label'</span><span style="color: #66cc66;">&#41;</span>;</pre></div>
+</div>
+<p>In our case we will have:</p>
+<div class="code"><pre class="php">&nbsp;
+        <span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">display_as</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'lastName'</span>,<span style="color: #ff0000;">'Last Name'</span><span style="color: #66cc66;">&#41;</span>;
+        <span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">display_as</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'firstName'</span>,<span style="color: #ff0000;">'First Name'</span><span style="color: #66cc66;">&#41;</span>;
+        <span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">display_as</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'jobTitle'</span>,<span style="color: #ff0000;">'Job Title'</span><span style="color: #66cc66;">&#41;</span>;
+&nbsp;</pre></div>
+<p>So a summary of our first CRUD with the most common methods is done with the below code:</p>
+<div class="code"><pre class="php">&nbsp;
+    <span style="color: #000000; font-weight: bold;">public</span> <span style="color: #000000; font-weight: bold;">function</span> employees_example<span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span>
+    <span style="color: #66cc66;">&#123;</span>
+        <span style="color: #0000ff;">$crud</span> = <span style="color: #000000; font-weight: bold;">new</span> grocery_CRUD<span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span>;
+&nbsp;
+        <span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">set_table</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'employees'</span><span style="color: #66cc66;">&#41;</span>;
+        <span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">columns</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'lastName'</span>,<span style="color: #ff0000;">'firstName'</span>,<span style="color: #ff0000;">'email'</span>,<span style="color: #ff0000;">'jobTitle'</span><span style="color: #66cc66;">&#41;</span>;
+        <span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">fields</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'lastName'</span>,<span style="color: #ff0000;">'firstName'</span>,<span style="color: #ff0000;">'extension'</span>,<span style="color: #ff0000;">'email'</span>,<span style="color: #ff0000;">'jobTitle'</span><span style="color: #66cc66;">&#41;</span>;
+&nbsp;
+        <span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">display_as</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'lastName'</span>,<span style="color: #ff0000;">'Last Name'</span><span style="color: #66cc66;">&#41;</span>;
+        <span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">display_as</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'firstName'</span>,<span style="color: #ff0000;">'First Name'</span><span style="color: #66cc66;">&#41;</span>;
+        <span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">display_as</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'jobTitle'</span>,<span style="color: #ff0000;">'Job Title'</span><span style="color: #66cc66;">&#41;</span>;
+&nbsp;
+        <span style="color: #0000ff;">$output</span> = <span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">render</span><span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span>;
+&nbsp;
+        <span style="color: #0000ff;">$this</span>-&gt;_example_output<span style="color: #66cc66;">&#40;</span><span style="color: #0000ff;">$output</span><span style="color: #66cc66;">&#41;</span>;                
+    <span style="color: #66cc66;">&#125;</span></pre></div>
+<p>You can also check a live example below of what those lines do.</p>
+<p>For more examples you can also check the "Simple Examples"  at <a href="../examples.html">grocery CRUD examples</a></p>
+<div id="bsap_1271391" class="bsarocks bsap_19492eb42d0fd695352ecaefa1dc0a1d"></div>
+<div style="z-index:99;position:absolute;font-size:11px; margin-left:852px;margin-top: -22px"><a id="bsap_aplink" href="http://adpacks.com/">via Ad Packs</a></div>
+<div class='clear'></div>
+<div style="padding-top:10px;margin-bottom:5px;">
+	<b>Note:</b> The below example is an iframe so it might appeared with a scroll bar. If you like you can view the example 
+	<a href='http://www.grocerycrud.com/demo/employees_example' target='_blank' rel='nofollow' >
+		on a new tab
+	</a>
+</div>
+<div>
+	<iframe src="http://www.grocerycrud.com/demo/employees_example/iframe" width="100%" height="900" style="border:none;"></iframe>
+</div>                 </div>
+          </section>
+                    <div class="clear"></div>
+	</div>
+	<footer class='container-full footer-background'>
+		<div class='container'>
+			<div class='footer-left'>
+				Grocery CRUD is released with <a href="https://github.com/scoumbourdis/grocery-crud/blob/master/license-grocery-crud.txt" target="_blank">dual licensing</a>, using the <a href="https://github.com/scoumbourdis/grocery-crud/blob/master/license-gpl3.txt" target="_blank">GPL v3</a>
+				 and the <a href="https://github.com/scoumbourdis/grocery-crud/blob/master/license-mit.txt" target="_blank">MIT license</a>.
+				<div style="height: 15px;"></div>
+				<div class='floatL'>
+				 	Copyright &copy; <a href="https://plus.google.com/u/0/107789497808468736690?rel=author" target="_blank">John Skoumbourdis</a> | <a href='http://www.web-and-development.com/' target="_blank">www.web-and-development.com</a>
+				 </div>		 
+				 <div class="floatL" style="margin-left:10px;margin-top: -7px;">
+					<form id='donate-form' action="https://www.paypal.com/cgi-bin/webscr" method="post">
+						<input type="hidden" name="cmd" value="_s-xclick" />
+						<input type="hidden" name="hosted_button_id" value="RTHNZ5U8K8RKQ" />
+						<input style='border:none' type="image" src="http://www.grocerycrud.com/assets/themes/default/images/btn_donate_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+					</form>				 
+				 </div>
+				 <div class="clear"></div>				
+			 </div>
+			 
+			 <div id='browsers-logos'>
+				<div class="h10"></div>			
+				  <a href="http://www.facebook.com/pages/Grocery-CRUD/226957574012339" target='_blank' title="Facebook"><span class="mozila"></span></a> 
+				  <a href="https://plus.google.com/u/0/102534880214903785396" target='_blank' title="Google +"><span class="chrome"></span></a> 
+				  <a href="https://twitter.com/groceryCRUD" target='_blank' title="Twitter"><span class="explorer"></span></a>
+				  <a href="https://github.com/scoumbourdis/grocery-crud" target='_blank' title="GitHub"><span class="github"></span></a> 
+				  				
+				<div class='clear'></div>
+			 </div>
+			 <div class='clear'></div>
+		 </div>
+	</footer>
+			<script type="text/javascript">
+	(function(){
+	  var bsa = document.createElement('script');
+	     bsa.type = 'text/javascript';
+	     bsa.async = true;
+	     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+	  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+	})();
+	</script>
+			
+		<!-- Google Analytics -->
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-23493740-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+	</body>
+</html>

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Functions and Options | Grocery CRUD, a Codeigniter CRUD</title>
+	
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="resource-type" content="document" />
+		<meta name="robots" content="all, index, follow"/>
+		<meta name="googlebot" content="all, index, follow" /> 
+	
+		<link rel="canonical" href="../../documentation/options_functions.html" />
+			
+		<meta property="og:image" content="http://www.grocerycrud.com/assets/themes/default/images/logo-thumb.jpg"/>
+		<link rel="search" type="application/opensearchdescription+xml" href="http://www.grocerycrud.com/opensearch.xml" title="Grocery CRUD Search">
+		<link rel="image_src" href="http://www.grocerycrud.com/assets/themes/default/images/logo-thumb.jpg" />
+		<link rel="shortcut icon" href="http://www.grocerycrud.com/assets/themes/default/images/favicon.png" type="image/x-icon"/>
+	
+		<link rel="stylesheet" href="http://www.grocerycrud.com/assets/themes/default/css/cache_ab4ac083805f8fb812d927285c647948.css?8202130805" type="text/css" />
+	
+		<script src="http://www.grocerycrud.com/assets/themes/default/js/jquery-1.7.1.min.js?8202130805"></script>
+		
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!--[if IE 9]>
+			<link rel="stylesheet" href="http://www.grocerycrud.com/assets/themes/default/css/ie9.css" type="text/css" /
+		<![endif]-->
+	</head>
+<body>
+<div class="container" id='top'>
+		<header>
+			<div id="logo">
+				<a href="http://www.grocerycrud.com/">
+					<img src="http://d328ce9sgcu5lp.cloudfront.net/themes/default/images/logo.png" alt="grocery CRUD logo" width='248' height='119' itemprop="image" >
+				</a>
+			</div>
+			<div id='basic-menu'>
+			
+				<div id='header-top-right'>
+				</div>
+				<nav id="main-navigation">
+					<ul>
+						<li class='first'><a href="../../examples.html">Examples</a></li>
+						<li class='current'><a href="../../documentation.html">Documentation</a></li>
+						<li><a href="http://www.grocerycrud.com/downloads">Download</a></li>
+						<li><a href="http://www.grocerycrud.com/forums">Forum</a></li>
+						<li class='last'><a href="http://www.grocerycrud.com/donate">Donate</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class='clear'></div>
+			<div class="h20"></div>
+		</header>
+	</div>
+	    	
+     	<div class='default-line'>
+     		<div class="container">
+        		<div class="left-container pt10 no-border">
+                	<div class='home-grocery floatL'>
+                    	<a href='http://www.grocerycrud.com/'><img src="http://d328ce9sgcu5lp.cloudfront.net/assets/themes/default/images/home-grocery.png" alt='' /></a>
+                    </div>
+                	<ul id='breadcrumb'>
+<li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="../../documentation.html" itemprop="url" ><span itemprop="title">Documentation</span></a>
+</li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="../../documentation/options_functions.html" itemprop="url" ><span itemprop="title">API and Functions list</span></a>
+</li>                    </ul>
+                    <div class='clear'></div>
+                </div>
+	          <div class="right-container pt10">
+				<form action='/search' method='get'>
+					<div class='search-box'>
+						<div class='floatL'>
+							<input id='quick_search' name='q' type='text' value='Quick Search...' onclick="javascript: document.getElementById('quick_search').value = '';" onblur ="javascript: if(document.getElementById('quick_search').value == '') document.getElementById('quick_search').value = 'Quick Search...';" />
+						</div>
+						<div class='floatR'>
+							<input type='image' src="http://d328ce9sgcu5lp.cloudfront.net/assets/themes/default/images/quick-search-button.png" alt='' />
+						</div>
+						<div class='clear'></div>
+					</div>
+				</form>	
+			  </div>                  
+                <div class='clear'></div>
+     		</div>   		
+     	</div>
+		
+		 <div class="container">		
+        <section class='left-container pt10'>
+        		<div class='content'>
+					<h1>API and Functions list</h1>
+	                 <table class='functions-table' cellpadding="0" cellspacing="0">
+	<tr>
+		<th>
+			Function Name
+		</th>
+		<th>
+			Small Description
+		</th>
+	</tr>
+<tr>
+			<td width='300'>
+				<a href='add_action.html'>add_action</a>				
+			</td>
+			<td>Add an action/operation to the list table.</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='add_fields.html'>add_fields</a>				
+			</td>
+			<td>The fields that user will see on add operation</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='callback_add_field.html'>callback_add_field</a>				
+			</td>
+			<td>This callback escapes the default auto field output of the field name at the add form.</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='callback_after_delete.html'>callback_after_delete</a>				
+			</td>
+			<td>The callback runs when the operation delete completed successfully</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='callback_after_insert.html'>callback_after_insert</a>				
+			</td>
+			<td>This is a callback after the auto insert of the CRUD.</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='callback_after_update.html'>callback_after_update</a>				
+			</td>
+			<td>This is a callback that is used after the automatic update of the CRUD.</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='callback_after_upload.html'>callback_after_upload</a>				
+			</td>
+			<td><p><span>A callback that triggered after the upload functionality.</span></p></td>
+	</tr><tr>
+			<td width='300'>
+				<a href='callback_before_delete.html'>callback_before_delete</a>				
+			</td>
+			<td>This callback runs before the auto delete of the crud.</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='callback_before_insert.html'>callback_before_insert</a>				
+			</td>
+			<td>This callback runs before the auto insert of the crud. </td>
+	</tr><tr>
+			<td width='300'>
+				<a href='callback_before_update.html'>callback_before_update</a>				
+			</td>
+			<td>This callback runs before the auto update of the crud. </td>
+	</tr><tr>
+			<td width='300'>
+				<a href='callback_before_upload.html'>callback_before_upload</a>				
+			</td>
+			<td><p><span>A callback that triggered before the upload functionality. This callback is suggested for validation checks.</span></p></td>
+	</tr><tr>
+			<td width='300'>
+				<a href='callback_column.html'>callback_column</a>				
+			</td>
+			<td>This callback runs on each row. It escapes the auto column value and runs the callback.</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='callback_delete.html'>callback_delete</a>				
+			</td>
+			<td><p>This callback escapes the auto delete of the CRUD , and runs only the callback.</p></td>
+	</tr><tr>
+			<td width='300'>
+				<a href='callback_edit_field.html'>callback_edit_field</a>				
+			</td>
+			<td>This callback escapes the default auto field output of the field name at the edit form.</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='callback_field.html'>callback_field</a>				
+			</td>
+			<td>This callback escapes the default auto field output of the field name for the add and edit form.</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='callback_insert.html'>callback_insert</a>				
+			</td>
+			<td><p>This callback escapes the auto insert of the CRUD, and runs only the inserted callback.</p></td>
+	</tr><tr>
+			<td width='300'>
+				<a href='callback_update.html'>callback_update</a>				
+			</td>
+			<td><p>This callback escapes the auto update of the CRUD , and runs only the callback.</p></td>
+	</tr><tr>
+			<td width='300'>
+				<a href='callback_upload.html'>callback_upload</a>				
+			</td>
+			<td><p><span>A callback that replaces the default auto uploader.</span></p></td>
+	</tr><tr>
+			<td width='300'>
+				<a href='change_field_type.html'>change_field_type</a>				
+			</td>
+			<td>Changes the default field type</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='columns.html'>columns</a>				
+			</td>
+			<td>The displayed columns that user see</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='display_as.html'>display_as</a>				
+			</td>
+			<td>Changes the displaying label of the table field</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='edit_fields.html'>edit_fields</a>				
+			</td>
+			<td>The fields that user will see on edit operation</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='fields.html'>fields</a>				
+			</td>
+			<td>The fields that user will see on add/edit</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='field_type.html'>field_type</a>				
+			</td>
+			<td>Just an alias to the change_field_type method.</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='getState.html'>getState</a>				
+			</td>
+			<td>Get the state string key according to the documentation.</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='getStateInfo.html'>getStateInfo</a>				
+			</td>
+			<td>Get the state information for the operation that fired.</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='get_field_types.html'>get_field_types</a>				
+			</td>
+			<td>Note: Getters is only to view some info and always works after the function render</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='get_primary_key.html'>get_primary_key</a>				
+			</td>
+			<td>Note: Getters is only to view some info and always works after the function render</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='get_table.html'>get_table</a>				
+			</td>
+			<td>Note: Getters is only to view some info and always works after the function render </td>
+	</tr><tr>
+			<td width='300'>
+				<a href='like.html'>like</a>				
+			</td>
+			<td>Same as codeigniter's like for the list.</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='limit.html'>limit</a>				
+			</td>
+			<td>Same as limit of codeigniter for the table list</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='order_by.html'>order_by</a>				
+			</td>
+			<td>A quick first order_by (same as codeigniter) to our list</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='or_like.html'>or_like</a>				
+			</td>
+			<td>Same as or_like of codeigniter for the table list</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='or_where.html'>or_where</a>				
+			</td>
+			<td>Same as codeigniter or_where for the list.</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='render.html'>render</a>				
+			</td>
+			<td>Or else ... make it work!! The web application takes decision of what to do and show it to the user.</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='required_fields.html'>required_fields</a>				
+			</td>
+			<td>Sets the required fields of add and edit fields.</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='set_crud_url_path.html'>set_crud_url_path</a>				
+			</td>
+			<td>This method is useful when the path is not specified correctly. Especially when we are using routes.</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='set_field_upload.html'>set_field_upload</a>				
+			</td>
+			<td>Sets a field name to be an uploaded file.</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='set_language.html'>set_language</a>				
+			</td>
+			<td>Simply set the language.</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='set_lang_string.html'>set_lang_string</a>				
+			</td>
+			<td>Set a language string directly.</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='set_model.html'>set_model</a>				
+			</td>
+			<td>Sets the model that crud will use ( The model always must extends grocery_Model )</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='set_primary_key.html'>set_primary_key</a>				
+			</td>
+			<td>Handles the default primary key for a specific table.</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='set_relation.html'>set_relation</a>				
+			</td>
+			<td><p>Set a relation 1-n database relation.</p></td>
+	</tr><tr>
+			<td width='300'>
+				<a href='set_relation_n_n.html'>set_relation_n_n</a>				
+			</td>
+			<td><p>Sets a relation with n-n relationship.</p></td>
+	</tr><tr>
+			<td width='300'>
+				<a href='set_rules.html'>set_rules</a>				
+			</td>
+			<td>Set Validation Rules ( Same as Codeigniter set_rules)</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='set_subject.html'>set_subject</a>				
+			</td>
+			<td>Set a subject to understand what type of CRUD you use.</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='set_table.html'>set_table</a>				
+			</td>
+			<td>Sets the basic database table that we will get our data.</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='set_theme.html'>set_theme</a>				
+			</td>
+			<td>Set the CRUD theme - For now on there is only 'flexigrid' and 'datatables' . The default theme is flexigrid.</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='unset_add.html'>unset_add</a>				
+			</td>
+			<td>Unsets the add operation</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='unset_add_fields.html'>unset_add_fields</a>				
+			</td>
+			<td>unsets the fields at the add form.</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='unset_back_to_list.html'>unset_back_to_list</a>				
+			</td>
+			<td>Unset all the "back to list" buttons and messages.</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='unset_columns.html'>unset_columns</a>				
+			</td>
+			<td>Unset columns from the list</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='unset_delete.html'>unset_delete</a>				
+			</td>
+			<td>Remove the delete operation from the CRUD grid</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='unset_edit.html'>unset_edit</a>				
+			</td>
+			<td>Unsets the edit operation</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='unset_edit_fields.html'>unset_edit_fields</a>				
+			</td>
+			<td>unsets the fields at the edit form.</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='unset_export.html'>unset_export</a>				
+			</td>
+			<td>Unset the export button and don't let the user to use this functionality.</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='unset_fields.html'>unset_fields</a>				
+			</td>
+			<td><p>Unset fields from both add and edit form.</p></td>
+	</tr><tr>
+			<td width='300'>
+				<a href='unset_jquery.html'>unset_jquery</a>				
+			</td>
+			<td>Unset the Jquery from loading. </td>
+	</tr><tr>
+			<td width='300'>
+				<a href='unset_jquery_ui.html'>unset_jquery_ui</a>				
+			</td>
+			<td>Unset the JqueryUI from loading. </td>
+	</tr><tr>
+			<td width='300'>
+				<a href='unset_list.html'>unset_list</a>				
+			</td>
+			<td>Unset the first page list (datagrid)</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='unset_operations.html'>unset_operations</a>				
+			</td>
+			<td>Unset all the operations . A user have access only to the grid.</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='unset_print.html'>unset_print</a>				
+			</td>
+			<td>Unset the print button and don't let the user to use this functionality.</td>
+	</tr><tr>
+			<td width='300'>
+				<a href='unset_texteditor.html'>unset_texteditor</a>				
+			</td>
+			<td><p>Unsets the texteditor of the selected fields</p></td>
+	</tr><tr>
+			<td width='300'>
+				<a href='where.html'>where</a>				
+			</td>
+			<td>A quick database where  (Same as codeigniter) to our list </td>
+	</tr></table>                 </div>
+          </section>
+                    <section class="right-container">
+          				<div class="h20"></div>
+		<!-- AdPacks.com Zone Code -->
+		<div id="bsap_1271391" class="bsarocks bsap_19492eb42d0fd695352ecaefa1dc0a1d"></div>
+		<div class="via_ad_packs"><a href="http://adpacks.com/" id="bsap_aplink">via Ad Packs</a></div>
+		<!-- End AdPacks.com Zone Code -->	
+				  <div class='h10 pt5'></div>
+	<div class='cornered-box'>	
+		<div class='cornered-box-title'>Latest download</div>
+			<ul class='with-arrows'>
+				<li>
+					<a href='http://grocery-crud.googlecode.com/files/grocery_CRUD-1.3.3.zip' rel="nofollow">
+								Download stable version 1.3.3
+							</a>
+						</li>
+						<li style="list-style:none">
+							Fully compatible with Codeigniter version 2.0.x  and 2.1.x<br/><br/>
+						</li>
+						<li>
+							<a target="_blank" href="https://github.com/scoumbourdis/grocery-crud">Grocery CRUD  at GitHub</a>
+						</li>
+						<li style="list-style:none">
+							View grocery CRUD project at GitHub<br/><br/>
+						</li>						
+					 </ul>  
+		  </div>	  
+		  <div class='h20'></div>
+   		  <div class='cornered-box'>
+			<div class="cornered-box-title">grocery CRUD Newsletter</div>
+			<div style='padding:5px 11px 5px 16px'>
+				Join our newsletter to receive our last updates and news.
+			</div>
+			<div style="padding: 5px 11px 5px 11px">
+				<!-- Begin MailChimp Signup Form -->
+				<div id="mc_embed_signup">
+				<form action="http://grocerycrud.us2.list-manage1.com/subscribe/post?u=09f10f1eb09be11aebd45bdbf&amp;id=a55513a72a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+				<div class="mc-field-group">
+					<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+				</label>
+					<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+				</div>
+				<div class="mc-field-group">
+					<label for="mce-FNAME">First Name  <span class="asterisk">*</span>
+				</label>
+					<input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
+				</div>
+				<div class="mc-field-group">
+					<label for="mce-LNAME">Last Name  <span class="asterisk">*</span>
+				</label>
+					<input type="text" value="" name="LNAME" class="required" id="mce-LNAME">
+				</div>
+					<div id="mce-responses" class="clear">
+						<div class="response" id="mce-error-response" style="display:none"></div>
+						<div class="response" id="mce-success-response" style="display:none"></div>
+					</div>	
+					<div class="clear">
+						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="float:left">
+						<div class="indicates-required" style="float:left;width:84px"><span class="asterisk">*</span> indicates required</div>
+						<div class="clear"></div>
+					</div>
+				</form>
+				</div>
+				<!--End mc_embed_signup-->
+			</div>
+		  </div>		  
+		  <div class='h20'></div>
+		  <div class='h10'></div>
+          </section>
+                    <div class="clear"></div>
+	</div>
+	<footer class='container-full footer-background'>
+		<div class='container'>
+			<div class='footer-left'>
+				Grocery CRUD is released with <a href="https://github.com/scoumbourdis/grocery-crud/blob/master/license-grocery-crud.txt" target="_blank">dual licensing</a>, using the <a href="https://github.com/scoumbourdis/grocery-crud/blob/master/license-gpl3.txt" target="_blank">GPL v3</a>
+				 and the <a href="https://github.com/scoumbourdis/grocery-crud/blob/master/license-mit.txt" target="_blank">MIT license</a>.
+				<div style="height: 15px;"></div>
+				<div class='floatL'>
+				 	Copyright &copy; <a href="https://plus.google.com/u/0/107789497808468736690?rel=author" target="_blank">John Skoumbourdis</a> | <a href='http://www.web-and-development.com/' target="_blank">www.web-and-development.com</a>
+				 </div>		 
+				 <div class="floatL" style="margin-left:10px;margin-top: -7px;">
+					<form id='donate-form' action="https://www.paypal.com/cgi-bin/webscr" method="post">
+						<input type="hidden" name="cmd" value="_s-xclick" />
+						<input type="hidden" name="hosted_button_id" value="RTHNZ5U8K8RKQ" />
+						<input style='border:none' type="image" src="http://www.grocerycrud.com/assets/themes/default/images/btn_donate_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+					</form>				 
+				 </div>
+				 <div class="clear"></div>				
+			 </div>
+			 
+			 <div id='browsers-logos'>
+				<div class="h10"></div>			
+				  <a href="http://www.facebook.com/pages/Grocery-CRUD/226957574012339" target='_blank' title="Facebook"><span class="mozila"></span></a> 
+				  <a href="https://plus.google.com/u/0/102534880214903785396" target='_blank' title="Google +"><span class="chrome"></span></a> 
+				  <a href="https://twitter.com/groceryCRUD" target='_blank' title="Twitter"><span class="explorer"></span></a>
+				  <a href="https://github.com/scoumbourdis/grocery-crud" target='_blank' title="GitHub"><span class="github"></span></a> 
+				  				
+				<div class='clear'></div>
+			 </div>
+			 <div class='clear'></div>
+		 </div>
+	</footer>
+			<script type="text/javascript">
+	(function(){
+	  var bsa = document.createElement('script');
+	     bsa.type = 'text/javascript';
+	     bsa.async = true;
+	     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+	  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+	})();
+	</script>
+			
+		<!-- Google Analytics -->
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-23493740-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+	</body>
+</html>

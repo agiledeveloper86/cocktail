@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Installation for Codeigniter | Grocery CRUD, a Codeigniter CRUD</title>
+	
+		<meta name="keywords" content="codeigniter installation, install grocery CRUD" />
+		<meta name="description" content="The installation is really easy. You just copy your files to your project and you are ready to use grocery CRUD. " />
+		<meta name="resource-type" content="document" />
+		<meta name="robots" content="all, index, follow"/>
+		<meta name="googlebot" content="all, index, follow" /> 
+	
+		<link rel="canonical" href="codeigniter_installation.html" />
+			
+		<meta property="og:image" content="http://www.grocerycrud.com/assets/themes/default/images/logo-thumb.jpg"/>
+		<link rel="search" type="application/opensearchdescription+xml" href="http://www.grocerycrud.com/opensearch.xml" title="Grocery CRUD Search">
+		<link rel="image_src" href="http://www.grocerycrud.com/assets/themes/default/images/logo-thumb.jpg" />
+		<link rel="shortcut icon" href="http://www.grocerycrud.com/assets/themes/default/images/favicon.png" type="image/x-icon"/>
+	
+		<link rel="stylesheet" href="http://www.grocerycrud.com/assets/themes/default/css/cache_ab4ac083805f8fb812d927285c647948.css?8202130805" type="text/css" />
+	
+		<script src="http://www.grocerycrud.com/assets/themes/default/js/jquery-1.7.1.min.js?8202130805"></script>
+		
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!--[if IE 9]>
+			<link rel="stylesheet" href="http://www.grocerycrud.com/assets/themes/default/css/ie9.css" type="text/css" /
+		<![endif]-->
+	</head>
+<body>
+<div class="container" id='top'>
+		<header>
+			<div id="logo">
+				<a href="http://www.grocerycrud.com/">
+					<img src="http://d328ce9sgcu5lp.cloudfront.net/themes/default/images/logo.png" alt="grocery CRUD logo" width='248' height='119' itemprop="image" >
+				</a>
+			</div>
+			<div id='basic-menu'>
+			
+				<div id='header-top-right'>
+				</div>
+				<nav id="main-navigation">
+					<ul>
+						<li class='first'><a href="../examples.html">Examples</a></li>
+						<li class='current'><a href="../documentation.html">Documentation</a></li>
+						<li><a href="http://www.grocerycrud.com/downloads">Download</a></li>
+						<li><a href="http://www.grocerycrud.com/forums">Forum</a></li>
+						<li class='last'><a href="http://www.grocerycrud.com/donate">Donate</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class='clear'></div>
+			<div class="h20"></div>
+		</header>
+	</div>
+	    	
+     	<div class='default-line'>
+     		<div class="container">
+        		<div class="left-container pt10 no-border">
+                	<div class='home-grocery floatL'>
+                    	<a href='http://www.grocerycrud.com/'><img src="http://d328ce9sgcu5lp.cloudfront.net/assets/themes/default/images/home-grocery.png" alt='' /></a>
+                    </div>
+                	<ul id='breadcrumb'>
+<li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="../documentation.html" itemprop="url" ><span itemprop="title">Documentation</span></a>
+</li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="codeigniter_installation.html" itemprop="url" ><span itemprop="title">Installation for Codeigniter</span></a>
+</li>                    </ul>
+                    <div class='clear'></div>
+                </div>
+	          <div class="right-container pt10">
+				<form action='/search' method='get'>
+					<div class='search-box'>
+						<div class='floatL'>
+							<input id='quick_search' name='q' type='text' value='Quick Search...' onclick="javascript: document.getElementById('quick_search').value = '';" onblur ="javascript: if(document.getElementById('quick_search').value == '') document.getElementById('quick_search').value = 'Quick Search...';" />
+						</div>
+						<div class='floatR'>
+							<input type='image' src="http://d328ce9sgcu5lp.cloudfront.net/assets/themes/default/images/quick-search-button.png" alt='' />
+						</div>
+						<div class='clear'></div>
+					</div>
+				</form>	
+			  </div>                  
+                <div class='clear'></div>
+     		</div>   		
+     	</div>
+		
+		 <div class="container">		
+        <section class='left-container pt10'>
+        		<div class='content'>
+					<h1>Installation for Codeigniter</h1>
+	                 <p>Also available in <a href="http://www.grocerycrud.com/forums/topic/690-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D0%B4%D0%BB%D1%8F-codeigniter%D0%B0-installation-for-codeigniter-in-russian/">Russian</a> and <a href="http://www.grocerycrud.com/forums/topic/1238-fr-translation-installation-for-codeigniter/">French</a></p>
+<p>
+	The installation is really easy. You just copy <b>all the files</b> to your project and you are ready to use grocery CRUD.
+</p>
+<p>
+By the end of the installation, your file structure should look similar to this (the below structure is the default unchanged folders/files of codeigniter):
+<div class='code'>
+website_folder/
+<br/>–––– application/
+<br/>–––––––– config/
+<br/>–––––––––––– autoload.php
+<br/>–––––––––––– ...
+<br/>–––––––––––– doctypes.php
+<br/>–––––––––––– foreign_chars.php
+<br/>–––––––––––– grocery_crud.php
+<br/>–––––––––––– ...
+<br/>–––––––– controllers/
+<br/>–––––––––––– examples.php
+<br/>–––––––––––– index.html
+<br/>–––––––––––– welcome.php
+<br/>–––––––– libraries/
+<br/>–––––––––––– grocery_crud.php
+<br/>–––––––––––– index.html
+<br/>–––––––– models/
+<br/>–––––––––––– grocery_crud_model.php
+<br/>–––––––––––– index.html
+<br/>–––––––– views/
+<br/>–––––––––––– example.php
+<br/>–––––––––––– index.html
+<br/>–––––––––––– welcome_message.php
+<br/>–––– assets/
+<br/>–––––––– grocery_crud/
+<br/>–––––––––––– css/
+<br/>–––––––––––– js/
+<br/>–––––––––––– texteditor/
+<br/>–––––––––––– themes/
+<br/>–––––––– uploads/
+<br/>–––––––– index.html
+<br/>–––– system/
+<br/>–––– user_guide/
+<br/>–––– change_log.txt
+<br/>–––– example_database.sql
+<br/>–––– index.php
+<br/>–––– licence-grocery-crud.txt
+<br/>–––– license.txt
+</div>
+</p>
+<p>
+	<b>Important Note for CI 1.7.x:</b> The only difference between codeigniter 2.0.x and codeigniter 1.7.x is that in 1.7.x you just extends Controller and <b>not</b> CI_Controller and at grocery_model you <b>don't</b> extend CI_Model but Model. Also make sure that the application folder is in the right place for CI 1.7.x
+</p>
+<p>
+Below I have an example of how a controller will look like.
+</p>
+                 <div class="code"><pre class="php" style="font-family:monospace;"><span style="color: #000000; font-weight: bold;"><?php</span> <span style="color: #b1b100;">if</span> <span style="color: #009900;">(</span> <span style="color: #339933;">!</span> <a href="http://www.php.net/defined"><span style="color: #990000;">defined</span></a><span style="color: #009900;">(</span><span style="color: #0000ff;">'BASEPATH'</span><span style="color: #009900;">)</span><span style="color: #009900;">)</span> <a href="http://www.php.net/exit"><span style="color: #990000;">exit</span></a><span style="color: #009900;">(</span><span style="color: #0000ff;">'No direct script access allowed'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+
+ 
+<span style="color: #000000; font-weight: bold;">class</span> Examples <span style="color: #000000; font-weight: bold;">extends</span> CI_Controller <span style="color: #009900;">{</span>
+ 
+    <span style="color: #000000; font-weight: bold;">function</span> __construct<span style="color: #009900;">(</span><span style="color: #009900;">)</span>
+    <span style="color: #009900;">{</span>
+        parent<span style="color: #339933;">::</span>__construct<span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+
+ 
+        <span style="color: #666666; font-style: italic;">/* Standard Libraries */</span>
+        <span style="color: #000088;">$this</span><span style="color: #339933;">-></span><span style="color: #004000;">load</span><span style="color: #339933;">-></span><span style="color: #004000;">database</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+        <span style="color: #000088;">$this</span><span style="color: #339933;">-></span><span style="color: #004000;">load</span><span style="color: #339933;">-></span><span style="color: #004000;">helper</span><span style="color: #009900;">(</span><span style="color: #0000ff;">'url'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+
+        <span style="color: #666666; font-style: italic;">/* ------------------ */</span>    
+ 
+        <span style="color: #000088;">$this</span><span style="color: #339933;">-></span><span style="color: #004000;">load</span><span style="color: #339933;">-></span><span style="color: #004000;">library</span><span style="color: #009900;">(</span><span style="color: #0000ff;">'grocery_CRUD'</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>    
+    <span style="color: #009900;">}</span>
+ 
+    <span style="color: #000000; font-weight: bold;">function</span> _example_output<span style="color: #009900;">(</span><span style="color: #000088;">$output</span> <span style="color: #339933;">=</span> <span style="color: #009900; font-weight: bold;">null</span><span style="color: #009900;">)</span>
+
+    <span style="color: #009900;">{</span>
+        <span style="color: #000088;">$this</span><span style="color: #339933;">-></span><span style="color: #004000;">load</span><span style="color: #339933;">-></span><span style="color: #004000;">view</span><span style="color: #009900;">(</span><span style="color: #0000ff;">'example.php'</span><span style="color: #339933;">,</span><span style="color: #000088;">$output</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>    
+    <span style="color: #009900;">}</span>
+ 
+    <span style="color: #000000; font-weight: bold;">function</span> offices<span style="color: #009900;">(</span><span style="color: #009900;">)</span>
+
+    <span style="color: #009900;">{</span>
+        <span style="color: #000088;">$output</span> <span style="color: #339933;">=</span> <span style="color: #000088;">$this</span><span style="color: #339933;">-></span><span style="color: #004000;">grocery_crud</span><span style="color: #339933;">-></span><span style="color: #004000;">render</span><span style="color: #009900;">(</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+ 
+        <span style="color: #000088;">$this</span><span style="color: #339933;">-></span>_example_output<span style="color: #009900;">(</span><span style="color: #000088;">$output</span><span style="color: #009900;">)</span><span style="color: #339933;">;</span>
+
+    <span style="color: #009900;">}</span>
+ 
+<span style="color: #339933;">.......</span>
+<span style="color: #009900;">}</span></pre></div>
+<div>
+<p>The only required libraries are to connect with the database (that we usually have it as auto-load library) and the url helper.</p>
+</div>
+<div><p>The variable <i>$output</i> is an object that always includes the following properties - <b>output</b>, <b>js_files</b>, <b>css_files</b>. Below you see an example of a print_r of a variable <i>$output</i></p>
+<p>
+<pre style='overflow:auto;-moz-border-radius: 5px;-webkit-border-radius: 5px;font-family:Tahoma,Arial,sans-serif;color:#333;background-color:#EEE;padding:10px;border:solid 1px #CCC;'>stdClass Object<br/>(<br/>    [output] => Your output will appear here....<br/>    [js_files] => Array<br/>        (<br/>            [763b4d272e158bdb8ed5a12a1824c94f494954bd] => http://grocery_crud/public/grocery_crud/themes/datatables/js/jquery-1.6.2.min.js<br/>            [0b677f3fc6fb25b4baf39eb144222116c5b60254] => http://grocery_crud/public/grocery_crud/themes/flexigrid/js/cookies.js<br/>            [ec3ae62b8d5838972e858fe54447bd4bd8d79f88] => http://grocery_crud/public/grocery_crud/themes/flexigrid/js/flexigrid.js<br/>            [2c0ff56d0cbc6f80a5ef9c770d478f0e00c3170d] => http://grocery_crud/public/grocery_crud/themes/flexigrid/js/jquery.form.js<br/>            [474495ff1e895eab81fb8afba4db9b06c15b19af] => http://grocery_crud/public/grocery_crud/themes/flexigrid/js/jquery.numeric.js<br/>        )<br/><br/>    [css_files] => Array<br/>        (<br/>            [732b03aa54d124f062757b71e5560acdc5632ba6] => http://grocery_crud/public/grocery_crud/themes/flexigrid/css/flexigrid.css<br/>        )<br/><br/>)<br/></pre>
+</p>
+<p>The view example.php that its a simple Codeigniter view and includes the below code:</p>
+<div class="code"><pre class="php">&nbsp;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=<span style="color: #ff0000;">&quot;en&quot;</span>&gt;
+&lt;head&gt;
+    &lt;meta charset=<span style="color: #ff0000;">&quot;utf-8&quot;</span> /&gt;
+&nbsp;
+<span style="color: #000000; font-weight: bold;">&lt;?php</span> 
+<span style="color: #b1b100;">foreach</span><span style="color: #66cc66;">&#40;</span><span style="color: #0000ff;">$css_files</span> <span style="color: #b1b100;">as</span> <span style="color: #0000ff;">$file</span><span style="color: #66cc66;">&#41;</span>: <span style="color: #000000; font-weight: bold;">?&gt;</span>
+    &lt;link type=<span style="color: #ff0000;">&quot;text/css&quot;</span> rel=<span style="color: #ff0000;">&quot;stylesheet&quot;</span> href=<span style="color: #ff0000;">&quot;&lt;?php echo $file; ?&gt;&quot;</span> /&gt;
+&nbsp;
+<span style="color: #000000; font-weight: bold;">&lt;?php</span> <span style="color: #b1b100;">endforeach</span>; <span style="color: #000000; font-weight: bold;">?&gt;</span>
+<span style="color: #000000; font-weight: bold;">&lt;?php</span> <span style="color: #b1b100;">foreach</span><span style="color: #66cc66;">&#40;</span><span style="color: #0000ff;">$js_files</span> <span style="color: #b1b100;">as</span> <span style="color: #0000ff;">$file</span><span style="color: #66cc66;">&#41;</span>: <span style="color: #000000; font-weight: bold;">?&gt;</span>
+&nbsp;
+    &lt;script src=<span style="color: #ff0000;">&quot;&lt;?php echo $file; ?&gt;&quot;</span>&gt;&lt;/script&gt;
+<span style="color: #000000; font-weight: bold;">&lt;?php</span> <span style="color: #b1b100;">endforeach</span>; <span style="color: #000000; font-weight: bold;">?&gt;</span>
+&nbsp;
+&lt;style type=<span style="color: #ff0000;">'text/css'</span>&gt;
+body
+<span style="color: #66cc66;">&#123;</span>
+    font-family: Arial;
+    font-size: 14px;
+<span style="color: #66cc66;">&#125;</span>
+a <span style="color: #66cc66;">&#123;</span>
+    color: blue;
+    text-decoration: none;
+    font-size: 14px;
+<span style="color: #66cc66;">&#125;</span>
+a:hover
+<span style="color: #66cc66;">&#123;</span>
+    text-decoration: underline;
+<span style="color: #66cc66;">&#125;</span>
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!-- Beginning <a href="http://www.php.net/header"><span style="color: #000066;">header</span></a> --&gt;
+    &lt;div&gt;
+        &lt;a href=<span style="color: #ff0000;">'&lt;?php echo site_url('</span>examples/offices_management<span style="color: #ff0000;">')?&gt;'</span>&gt;Offices&lt;/a&gt; | 
+        &lt;a href=<span style="color: #ff0000;">'&lt;?php echo site_url('</span>examples/employees_management<span style="color: #ff0000;">')?&gt;'</span>&gt;Employees&lt;/a&gt; |
+        &lt;a href=<span style="color: #ff0000;">'&lt;?php echo site_url('</span>examples/customers_management<span style="color: #ff0000;">')?&gt;'</span>&gt;Customers&lt;/a&gt; |
+        &lt;a href=<span style="color: #ff0000;">'&lt;?php echo site_url('</span>examples/orders_management<span style="color: #ff0000;">')?&gt;'</span>&gt;Orders&lt;/a&gt; |
+        &lt;a href=<span style="color: #ff0000;">'&lt;?php echo site_url('</span>examples/products_management<span style="color: #ff0000;">')?&gt;'</span>&gt;Products&lt;/a&gt; | 
+        &lt;a href=<span style="color: #ff0000;">'&lt;?php echo site_url('</span>examples/film_management<span style="color: #ff0000;">')?&gt;'</span>&gt;Films&lt;/a&gt;
+&nbsp;
+    &lt;/div&gt;
+&lt;!-- <a href="http://www.php.net/end"><span style="color: #000066;">End</span></a> of header--&gt;
+    &lt;div style=<span style="color: #ff0000;">'height:20px;'</span>&gt;&lt;/div&gt;  
+    &lt;div&gt;
+        <span style="color: #000000; font-weight: bold;">&lt;?php</span> <a href="http://www.php.net/echo"><span style="color: #000066;">echo</span></a> <span style="color: #0000ff;">$output</span>; <span style="color: #000000; font-weight: bold;">?&gt;</span>
+&nbsp;
+    &lt;/div&gt;
+&lt;!-- Beginning footer --&gt;
+&lt;div&gt;Footer&lt;/div&gt;
+&lt;!-- <a href="http://www.php.net/end"><span style="color: #000066;">End</span></a> of Footer --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&nbsp;</pre></div>
+
+<div>
+	<p>
+		That's it! You can now celebrate that you can use the power of grocery CRUD in your project. Continue with <a href='http://www.grocerycrud.com/crud/view/examples'>the examples</a> or go straight to the 
+<a href='http://www.grocerycrud.com/crud/view/options_functions'>methods/functions</a> of grocery CRUD library
+	</p>
+	<p>
+		<span style='color:red'>Doesn't work?</span>. You can also see the <a href="create-crud-codeigniter-tutorial.html">newbies grocery CRUD installation guide</a></p>
+<p>In addition, you can check the <a href='http://www.grocerycrud.com/crud/view/known-issues'>known issues</a> or you can find the answer at <a href="http://www.grocerycrud.com/forums/">grocery CRUD forum</a>. Still you can't install it? Send us a message at <a href='http://www.grocerycrud.com/crud/view/support'>support form</a> and we will answer you as soon as possible.
+	</p>
+</div>
+</div>                 </div>
+          </section>
+                    <section class="right-container">
+          				<div class="h20"></div>
+		<!-- AdPacks.com Zone Code -->
+		<div id="bsap_1271391" class="bsarocks bsap_19492eb42d0fd695352ecaefa1dc0a1d"></div>
+		<div class="via_ad_packs"><a href="http://adpacks.com/" id="bsap_aplink">via Ad Packs</a></div>
+		<!-- End AdPacks.com Zone Code -->	
+				  <div class='h10 pt5'></div>
+	<div class='cornered-box'>	
+		<div class='cornered-box-title'>Latest download</div>
+			<ul class='with-arrows'>
+				<li>
+					<a href='http://grocery-crud.googlecode.com/files/grocery_CRUD-1.3.3.zip' rel="nofollow">
+								Download stable version 1.3.3
+							</a>
+						</li>
+						<li style="list-style:none">
+							Fully compatible with Codeigniter version 2.0.x  and 2.1.x<br/><br/>
+						</li>
+						<li>
+							<a target="_blank" href="https://github.com/scoumbourdis/grocery-crud">Grocery CRUD  at GitHub</a>
+						</li>
+						<li style="list-style:none">
+							View grocery CRUD project at GitHub<br/><br/>
+						</li>						
+					 </ul>  
+		  </div>	  
+		  <div class='h20'></div>
+   		  <div class='cornered-box'>
+			<div class="cornered-box-title">grocery CRUD Newsletter</div>
+			<div style='padding:5px 11px 5px 16px'>
+				Join our newsletter to receive our last updates and news.
+			</div>
+			<div style="padding: 5px 11px 5px 11px">
+				<!-- Begin MailChimp Signup Form -->
+				<div id="mc_embed_signup">
+				<form action="http://grocerycrud.us2.list-manage1.com/subscribe/post?u=09f10f1eb09be11aebd45bdbf&amp;id=a55513a72a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+				<div class="mc-field-group">
+					<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+				</label>
+					<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+				</div>
+				<div class="mc-field-group">
+					<label for="mce-FNAME">First Name  <span class="asterisk">*</span>
+				</label>
+					<input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
+				</div>
+				<div class="mc-field-group">
+					<label for="mce-LNAME">Last Name  <span class="asterisk">*</span>
+				</label>
+					<input type="text" value="" name="LNAME" class="required" id="mce-LNAME">
+				</div>
+					<div id="mce-responses" class="clear">
+						<div class="response" id="mce-error-response" style="display:none"></div>
+						<div class="response" id="mce-success-response" style="display:none"></div>
+					</div>	
+					<div class="clear">
+						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="float:left">
+						<div class="indicates-required" style="float:left;width:84px"><span class="asterisk">*</span> indicates required</div>
+						<div class="clear"></div>
+					</div>
+				</form>
+				</div>
+				<!--End mc_embed_signup-->
+			</div>
+		  </div>		  
+		  <div class='h20'></div>
+		  <div class='h10'></div>
+          </section>
+                    <div class="clear"></div>
+	</div>
+	<footer class='container-full footer-background'>
+		<div class='container'>
+			<div class='footer-left'>
+				Grocery CRUD is released with <a href="https://github.com/scoumbourdis/grocery-crud/blob/master/license-grocery-crud.txt" target="_blank">dual licensing</a>, using the <a href="https://github.com/scoumbourdis/grocery-crud/blob/master/license-gpl3.txt" target="_blank">GPL v3</a>
+				 and the <a href="https://github.com/scoumbourdis/grocery-crud/blob/master/license-mit.txt" target="_blank">MIT license</a>.
+				<div style="height: 15px;"></div>
+				<div class='floatL'>
+				 	Copyright &copy; <a href="https://plus.google.com/u/0/107789497808468736690?rel=author" target="_blank">John Skoumbourdis</a> | <a href='http://www.web-and-development.com/' target="_blank">www.web-and-development.com</a>
+				 </div>		 
+				 <div class="floatL" style="margin-left:10px;margin-top: -7px;">
+					<form id='donate-form' action="https://www.paypal.com/cgi-bin/webscr" method="post">
+						<input type="hidden" name="cmd" value="_s-xclick" />
+						<input type="hidden" name="hosted_button_id" value="RTHNZ5U8K8RKQ" />
+						<input style='border:none' type="image" src="http://www.grocerycrud.com/assets/themes/default/images/btn_donate_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+					</form>				 
+				 </div>
+				 <div class="clear"></div>				
+			 </div>
+			 
+			 <div id='browsers-logos'>
+				<div class="h10"></div>			
+				  <a href="http://www.facebook.com/pages/Grocery-CRUD/226957574012339" target='_blank' title="Facebook"><span class="mozila"></span></a> 
+				  <a href="https://plus.google.com/u/0/102534880214903785396" target='_blank' title="Google +"><span class="chrome"></span></a> 
+				  <a href="https://twitter.com/groceryCRUD" target='_blank' title="Twitter"><span class="explorer"></span></a>
+				  <a href="https://github.com/scoumbourdis/grocery-crud" target='_blank' title="GitHub"><span class="github"></span></a> 
+				  				
+				<div class='clear'></div>
+			 </div>
+			 <div class='clear'></div>
+		 </div>
+	</footer>
+			<script type="text/javascript">
+	(function(){
+	  var bsa = document.createElement('script');
+	     bsa.type = 'text/javascript';
+	     bsa.async = true;
+	     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+	  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+	})();
+	</script>
+			
+		<!-- Google Analytics -->
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-23493740-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+	</body>
+</html>

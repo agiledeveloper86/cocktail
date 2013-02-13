@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Tutorial - Basic Methods (continue) | Grocery CRUD, a Codeigniter CRUD</title>
+	
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="resource-type" content="document" />
+		<meta name="robots" content="all, index, follow"/>
+		<meta name="googlebot" content="all, index, follow" /> 
+	
+		<link rel="canonical" href="tutorial_basic_methods_2nd_part.html" />
+			
+		<meta property="og:image" content="http://www.grocerycrud.com/assets/themes/default/images/logo-thumb.jpg"/>
+		<link rel="search" type="application/opensearchdescription+xml" href="http://www.grocerycrud.com/opensearch.xml" title="Grocery CRUD Search">
+		<link rel="image_src" href="http://www.grocerycrud.com/assets/themes/default/images/logo-thumb.jpg" />
+		<link rel="shortcut icon" href="http://www.grocerycrud.com/assets/themes/default/images/favicon.png" type="image/x-icon"/>
+	
+		<link rel="stylesheet" href="http://www.grocerycrud.com/assets/themes/default/css/cache_ab4ac083805f8fb812d927285c647948.css?8202130805" type="text/css" />
+	
+		<script src="http://www.grocerycrud.com/assets/themes/default/js/jquery-1.7.1.min.js?8202130805"></script>
+		
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!--[if IE 9]>
+			<link rel="stylesheet" href="http://www.grocerycrud.com/assets/themes/default/css/ie9.css" type="text/css" /
+		<![endif]-->
+	</head>
+<body>
+<div class="container" id='top'>
+		<header>
+			<div id="logo">
+				<a href="http://www.grocerycrud.com/">
+					<img src="http://d328ce9sgcu5lp.cloudfront.net/themes/default/images/logo.png" alt="grocery CRUD logo" width='248' height='119' itemprop="image" >
+				</a>
+			</div>
+			<div id='basic-menu'>
+			
+				<div id='header-top-right'>
+				</div>
+				<nav id="main-navigation">
+					<ul>
+						<li class='first'><a href="../examples.html">Examples</a></li>
+						<li class='current'><a href="../documentation.html">Documentation</a></li>
+						<li><a href="http://www.grocerycrud.com/downloads">Download</a></li>
+						<li><a href="http://www.grocerycrud.com/forums">Forum</a></li>
+						<li class='last'><a href="http://www.grocerycrud.com/donate">Donate</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class='clear'></div>
+			<div class="h20"></div>
+		</header>
+	</div>
+	    	
+     	<div class='default-line'>
+     		<div class="container">
+        		<div class="left-container pt10 no-border">
+                	<div class='home-grocery floatL'>
+                    	<a href='http://www.grocerycrud.com/'><img src="http://d328ce9sgcu5lp.cloudfront.net/assets/themes/default/images/home-grocery.png" alt='' /></a>
+                    </div>
+                	<ul id='breadcrumb'>
+<li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="../documentation.html" itemprop="url" ><span itemprop="title">Documentation</span></a>
+</li><li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="tutorial_basic_methods_2nd_part.html" itemprop="url" ><span itemprop="title">Tutorial - Basic Methods (continue)</span></a>
+</li>                    </ul>
+                    <div class='clear'></div>
+                </div>
+	          <div class="right-container pt10">
+				<form action='/search' method='get'>
+					<div class='search-box'>
+						<div class='floatL'>
+							<input id='quick_search' name='q' type='text' value='Quick Search...' onclick="javascript: document.getElementById('quick_search').value = '';" onblur ="javascript: if(document.getElementById('quick_search').value == '') document.getElementById('quick_search').value = 'Quick Search...';" />
+						</div>
+						<div class='floatR'>
+							<input type='image' src="http://d328ce9sgcu5lp.cloudfront.net/assets/themes/default/images/quick-search-button.png" alt='' />
+						</div>
+						<div class='clear'></div>
+					</div>
+				</form>	
+			  </div>                  
+                <div class='clear'></div>
+     		</div>   		
+     	</div>
+		
+		 <div class="container">		
+        <section class='one-column-container pt10'>
+        		<div class='content'>
+					<h1>Tutorial - Basic Methods (continue)</h1>
+	                 <p><a href="tutorial_basic_methods.html"><< Tutorial - Basic Methods</a></p>
+<p>After some times using grocery CRUD you will realize that you need more. For example if you want to have different fields at the add form and different in the edit form you can easily use:</p>
+<h2>add_fields and edit_fields</h2>
+<p>The add_fields and edit_fields it is really easy to use it as you already have using it ... without knowing it! What I mean? The method <i>fields</i> is nothing more than a shortcut and an alias to add_fields and edit_fields. For example if we have: </p>
+<div class="code"><pre class="php">&nbsp;
+<span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">fields</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'customerName'</span>,<span style="color: #ff0000;">'contactLastName'</span>,<span style="color: #ff0000;">'phone'</span>,<span style="color: #ff0000;">'city'</span>,<span style="color: #ff0000;">'country'</span>,<span style="color: #ff0000;">'creditLimit'</span><span style="color: #66cc66;">&#41;</span>;
+&nbsp;</pre></div>
+<p>Is equal to:</p>
+<div class="code"><pre class="php">&nbsp;
+<span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">add_fields</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'customerName'</span>,<span style="color: #ff0000;">'contactLastName'</span>,<span style="color: #ff0000;">'phone'</span>,<span style="color: #ff0000;">'city'</span>,<span style="color: #ff0000;">'country'</span>,<span style="color: #ff0000;">'creditLimit'</span><span style="color: #66cc66;">&#41;</span>;
+<span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">edit_fields</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'customerName'</span>,<span style="color: #ff0000;">'contactLastName'</span>,<span style="color: #ff0000;">'phone'</span>,<span style="color: #ff0000;">'city'</span>,<span style="color: #ff0000;">'country'</span>,<span style="color: #ff0000;">'creditLimit'</span><span style="color: #66cc66;">&#41;</span>;
+&nbsp;</pre></div>
+<p>It is very useful when we need different fields at add and different fields at edit form, for example let's say that the password field is not needed to the edit form we can simply do:</p>
+<div class="code"><pre class="php">&nbsp;
+<span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">add_fields</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'username'</span>,<span style="color: #ff0000;">'password'</span>,<span style="color: #ff0000;">'first_name'</span>,<span style="color: #ff0000;">'last_name'</span><span style="color: #66cc66;">&#41;</span>;
+<span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">edit_fields</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'username'</span>,<span style="color: #ff0000;">'first_name'</span>,<span style="color: #ff0000;">'last_name'</span><span style="color: #66cc66;">&#41;</span>;
+&nbsp;</pre></div>
+<div class="tip">
+Did you know that in every function of grocery CRUD that you can handle unlimited fields with a comma seperated such as <i>columns</i>, <i>fields</i>,  <i>add_fields</i>, <i>unset_fields</i>... e.t.c. you can also have an array there? For example the <br/>$crud->add_fields('username','password','first_name','last_name') can also be written as <br/>$crud->add_fields(array('username','password','first_name','last_name'));
+</div>
+<h2 id="required-fields">required_fields</h2>
+<p>Very important and useful method to add required fields. You can simply add your required fields with this simple syntax:</p>
+<div class="super">
+<div class="code"><pre class="php"><span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">required_fields</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'field_name_1'</span>,<span style="color: #ff0000;">'field_name_2'</span>,<span style="color: #ff0000;">'field_name_3'</span><span style="color: #66cc66;">&#41;</span>;</pre></div>
+</div>
+<p>With this line of code you will have your field name with a red asterisk (that means that the field is required) and when the user press the button of save without having complete all the required fields it will appear a message like this:</p>
+<img src="http://www.grocerycrud.com/assets/uploads/general/required-fields-message.png" alt="required fields grocery CRUD" />
+<h2>set_rules</h2>
+<p>The set_rules method works exactly with the same way as codeigniter's <a href="http://codeigniter.com/user_guide/libraries/form_validation.html#validationrules" target="_blank">set_rules</a> method of form_validation library. The only difference is that you will add the set_rules at your grocery_CRUD object. For example:</p>
+<div class="super">
+<div class="code"><pre class="php"><span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">set_rules</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'quantityInStock'</span>,<span style="color: #ff0000;">'Quantity In Stock'</span>,<span style="color: #ff0000;">'integer'</span><span style="color: #66cc66;">&#41;</span>;</pre></div>
+</div>
+<p>For more you can read the <a href="http://codeigniter.com/user_guide/libraries/form_validation.html#validationrules" target="_blank">set_rules codeigniter documentation</a>. The cool thing about grocery CRUD is that only with this line of code you will have all the validation messages when a user submits an invalid form.</p>
+<h2>unset_add, unset_edit,unset_delete and unset_list</h2>
+You can simply unset any operation you like with using those methods. So for example if you add the line:
+<div class="super">
+<div class="code"><pre class="php"><span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">unset_edit</span><span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span>;</pre></div>
+</div>
+<p>You will see that the edit button is missing like the below image:</p>
+<img src="http://www.grocerycrud.com/assets/uploads/general/unset_edit_image.png" alt="unset edit image" />
+<p>The methods unset_add, unset_edit,unset_delete and unset_list doesn't just unset the button. There are also intelligent enough to understand that even if you add with the hard way the url (eg. /examples/customers_management/edit/103 ) You will have an error with message: "You don't have permissions for this operation" . As it is an exception and not just a show_error you can handle it with your way.</p>
+<p>For more about those methods you can read the documentation API for functions <a href="options_functions/unset_add.html">unset_add</a>, <a href="options_functions/unset_edit.html">unset_edit</a>, <a href="options_functions/unset_delete.html">unset_delete</a> and <a href="options_functions/unset_operations.html">unset_operations</a></p>
+<h2>unset_texteditor</h2>
+<p>It simply unsets the texteditor from the fields that you had specified with the below syntax: </p>
+<div class="super">
+<div class="code"><pre class="php"><span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">unset_texteditor</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'field_name_1'</span>,<span style="color: #ff0000;">'field_name_2'</span>,<span style="color: #ff0000;">'field_name_3'</span><span style="color: #66cc66;">&#41;</span>;</pre></div>
+</div>
+<p>For example:</p>
+
+<div class="code"><pre class="php">    <span style="color: #000000; font-weight: bold;">function</span> films_without_editor<span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span>
+    <span style="color: #66cc66;">&#123;</span>
+        <span style="color: #0000ff;">$crud</span> = <span style="color: #000000; font-weight: bold;">new</span> grocery_CRUD<span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span>;
+&nbsp;
+        <span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">set_table</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'film'</span><span style="color: #66cc66;">&#41;</span>;
+&nbsp;
+        <span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">unset_columns</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'description'</span>,<span style="color: #ff0000;">'special_features'</span>,<span style="color: #ff0000;">'last_update'</span><span style="color: #66cc66;">&#41;</span>;
+        <span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">fields</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'title'</span>, <span style="color: #ff0000;">'description'</span>, <span style="color: #ff0000;">'release_year'</span>, <span style="color: #ff0000;">'rental_duration'</span>, <span style="color: #ff0000;">'rental_rate'</span>, <span style="color: #ff0000;">'length'</span>, <span style="color: #ff0000;">'replacement_cost'</span>, <span style="color: #ff0000;">'rating'</span>, <span style="color: #ff0000;">'special_features'</span><span style="color: #66cc66;">&#41;</span>;
+&nbsp;
+        <span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">unset_texteditor</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">'description'</span><span style="color: #66cc66;">&#41;</span>;
+&nbsp;
+        <span style="color: #0000ff;">$output</span> = <span style="color: #0000ff;">$crud</span>-&gt;<span style="color: #006600;">render</span><span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span>;
+        <span style="color: #0000ff;">$this</span>-&gt;_example_output<span style="color: #66cc66;">&#40;</span><span style="color: #0000ff;">$output</span><span style="color: #66cc66;">&#41;</span>;
+    <span style="color: #66cc66;">&#125;</span></pre></div>
+<p>You can also check the live example below to see that the texteditor has been disappeared at the field description when you are adding or editing</p>
+<div id="bsap_1271391" class="bsarocks bsap_19492eb42d0fd695352ecaefa1dc0a1d"></div>
+<div style="z-index:99;position:absolute;font-size:11px; margin-left:852px;margin-top: -22px"><a id="bsap_aplink" href="http://adpacks.com/">via Ad Packs</a></div>
+<div class='clear'></div>
+<div style="padding-top:10px;margin-bottom:5px;">
+	<b>Note:</b> The below example is an iframe so it might appeared with a scroll bar. If you like you can view the example 
+	<a href='http://www.grocerycrud.com/demo/films_without_editor' target='_blank' rel='nofollow' >
+		on a new tab
+	</a>
+</div>
+<div>
+	<iframe src="http://www.grocerycrud.com/demo/films_without_editor/iframe" width="100%" height="900" style="border:none;"></iframe>
+</div>                 </div>
+          </section>
+                    <div class="clear"></div>
+	</div>
+	<footer class='container-full footer-background'>
+		<div class='container'>
+			<div class='footer-left'>
+				Grocery CRUD is released with <a href="https://github.com/scoumbourdis/grocery-crud/blob/master/license-grocery-crud.txt" target="_blank">dual licensing</a>, using the <a href="https://github.com/scoumbourdis/grocery-crud/blob/master/license-gpl3.txt" target="_blank">GPL v3</a>
+				 and the <a href="https://github.com/scoumbourdis/grocery-crud/blob/master/license-mit.txt" target="_blank">MIT license</a>.
+				<div style="height: 15px;"></div>
+				<div class='floatL'>
+				 	Copyright &copy; <a href="https://plus.google.com/u/0/107789497808468736690?rel=author" target="_blank">John Skoumbourdis</a> | <a href='http://www.web-and-development.com/' target="_blank">www.web-and-development.com</a>
+				 </div>		 
+				 <div class="floatL" style="margin-left:10px;margin-top: -7px;">
+					<form id='donate-form' action="https://www.paypal.com/cgi-bin/webscr" method="post">
+						<input type="hidden" name="cmd" value="_s-xclick" />
+						<input type="hidden" name="hosted_button_id" value="RTHNZ5U8K8RKQ" />
+						<input style='border:none' type="image" src="http://www.grocerycrud.com/assets/themes/default/images/btn_donate_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+					</form>				 
+				 </div>
+				 <div class="clear"></div>				
+			 </div>
+			 
+			 <div id='browsers-logos'>
+				<div class="h10"></div>			
+				  <a href="http://www.facebook.com/pages/Grocery-CRUD/226957574012339" target='_blank' title="Facebook"><span class="mozila"></span></a> 
+				  <a href="https://plus.google.com/u/0/102534880214903785396" target='_blank' title="Google +"><span class="chrome"></span></a> 
+				  <a href="https://twitter.com/groceryCRUD" target='_blank' title="Twitter"><span class="explorer"></span></a>
+				  <a href="https://github.com/scoumbourdis/grocery-crud" target='_blank' title="GitHub"><span class="github"></span></a> 
+				  				
+				<div class='clear'></div>
+			 </div>
+			 <div class='clear'></div>
+		 </div>
+	</footer>
+			<script type="text/javascript">
+	(function(){
+	  var bsa = document.createElement('script');
+	     bsa.type = 'text/javascript';
+	     bsa.async = true;
+	     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+	  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+	})();
+	</script>
+			
+		<!-- Google Analytics -->
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-23493740-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+	</body>
+</html>
