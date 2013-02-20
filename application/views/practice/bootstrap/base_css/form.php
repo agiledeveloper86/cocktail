@@ -1,4 +1,4 @@
-<div class="fluid-container"><div class="row-fluid"><h1 class="span4 offset4">Form</h1></div></div>
+<div class="fluid-container"><div class="row-fluid"><h1 class="span4 offset5">Form</h1></div></div>
 
 <div class="container-fluid">
 	<div class="row-fluid">
@@ -81,7 +81,77 @@
     			</fieldset>
     		</from>
     	</div>
+    	<div class="span3">
+    		<form>
+    			<fieldset>
+    				<legend>form select single</legend>
+    				<lebel>select one</lebel>
+    				<select>
+						<option>1</option>
+						<option>2</option>
+                        <option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select>
+    			</fieldset>
+    		</form>
+    	</div>
+    	<div class="span3">
+    		<form>
+    			<fieldset>
+    				<legend>form select multiple</legend>
+    				<lebel>select multiple</lebel>
+    				<select multiple="multiple">
+						<option>1</option>
+						<option>2</option>
+                        <option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select>
+    			</fieldset>
+    		</form>
+    	</div>
+    	<div class="span3">
+		    <form class="form-search">
+            <input type="text" class="input-medium search-query">
+		    <button type="submit" class="btn">Search</button>
+            </form>
+		</div>
+    </div>
+    <div class="row-fluid">
+    	<div class="span5">
+    		    <form class="form-inline">
+				    <input type="text" class="input-small" placeholder="Email">
+				    <input type="password" class="input-small" placeholder="Password">
+				    <label class="checkbox">
+				    <input type="checkbox"> Remember me
+				    </label>
+				    <button type="submit" class="btn">Sign in</button>
+			    </form>
+    	</div>
     	<div class="span4">
+		    <form class="form-horizontal">
+			    <div class="control-group">
+			    <label class="control-label" for="inputEmail">Email</label>
+			    <div class="controls">
+			    <input type="text" id="inputEmail" placeholder="Email">
+			    </div>
+			    </div>
+			    <div class="control-group">
+			    <label class="control-label" for="inputPassword">Password</label>
+			    <div class="controls">
+			    <input type="password" id="inputPassword" placeholder="Password">
+			    </div>
+			    </div>
+			    <div class="control-group">
+			    <div class="controls">
+			    <label class="checkbox">
+			    <input type="checkbox"> Remember me
+			    </label>
+			    <button type="submit" class="btn">Sign in</button>
+			    </div>
+			    </div>
+		    </form>
     	</div>
     </div>
 </div>
