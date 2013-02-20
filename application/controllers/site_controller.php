@@ -14,14 +14,14 @@ class Site_controller extends CI_Controller {
 	}
 	public function view1()
 	{
-		$this->load->view('core_views/head_main.php');
-		$this->load->view('core_views/body_main.php');
-		$this->load->view('core_views/foot_main.php');
+		$this->load->view('core_views/head_practice');
+		$this->load->view('core_views/body_main');
+		$this->load->view('core_views/foot_practice');
 	}
 	public function min()
 	{
-		$this->load->view('core_views/head_main.php');
-		$this->load->view('core_views/body_min.php');
-		$this->load->view('core_views/foot_main.php');
+		$this->load->view('core_views/head_practice');
+		$this->load->view('core_views/body_practice');
+		$this->load->view('core_views/foot_practice');
 	}
 }

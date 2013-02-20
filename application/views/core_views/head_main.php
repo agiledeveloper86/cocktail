@@ -10,12 +10,13 @@
  <meta name="description" content="">
  <meta name="viewport" content="width=device-width">
 
-  
  <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/bootstrap.min.css'); ?>">
  <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/jq-ui/jquery-ui-1.10.0.custom.css'); ?>">
  <!--[if IE 7]>
  <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/jq-ui/jquery.ui.1.10.0.ie.css'); ?>">
  <![endif]-->
+ 
+
     <style>
      body{
         padding-top: 60px;
@@ -50,4 +51,9 @@
         <![endif]-->
 
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
-<div class="container-fluid">
+
+<div class="cotainer-fluid">
+    <div class="row-fluid"> 
+        <div class="span4 offset5"><h2><a href="<?php echo base_url('practice_indexctrl'); ?>">HOME</a></h2></div>
+    </div>
+</div>

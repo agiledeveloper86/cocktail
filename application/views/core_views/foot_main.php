@@ -1,4 +1,4 @@
-</div>
+
     
     <script type="text/javascript" src ="<?php echo base_url('resources/js/vendor/jquery-1.9.0.min.js'); ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('resources/js/vendor/bootstrap.min.js'); ?>"></script>
