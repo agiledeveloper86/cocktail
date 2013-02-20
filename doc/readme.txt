@@ -31,7 +31,7 @@
  resourse/js=plugins.js+scripts.js
  resources/img=bootsrap icon images
  resources/ico=apple touch icons+favicon
- resources/extra=(ion-auth+gcrud) sql file + dm-extra. 
+ resources/extra=ci_db.sql+(ion-auth+gcrud) sql file + dm-extra. 
 
 4.views/core(head_main+foot_main+body_main+body_min)==core views
 5.[site_controller] with view1 and min method where view1 is evocked by index method.[site_controller] is default route.
