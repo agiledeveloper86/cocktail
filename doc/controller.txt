@@ -1,0 +1,9 @@
+basic controller
+----------------
+1.site_cotroller/ with view1 and min function[view1=index]
+                                            [view1=loading core_view/(head_main+body_main+foot_main)]
+                                            [min=loading core_view/(head_main+body_min+foot_main)]
+
+2.crud/democtrl/ 
+  crud/sitectrl/
+3.auth/
