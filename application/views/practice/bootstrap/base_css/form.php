@@ -113,7 +113,7 @@
     	</div>
     	<div class="span3">
 		    <form class="form-search">
-		    <legend>search form</legend>
+		    <legend>search form(conflict)</legend>
 
             <input type="text" class="input-medium search-query">
 		    <button type="submit" class="btn">Search</button>
@@ -123,7 +123,7 @@
     <div class="row-fluid">
     	<div class="span5">
     		    <form class="form-inline">
-    		    	<legend>Inline form</legend>
+    		    	<legend>Inline form(conflict)</legend>
     		    	
 				    <input type="text" class="input-small" placeholder="Email">
 				    <input type="password" class="input-small" placeholder="Password">
@@ -135,7 +135,7 @@
     	</div>
     	<div class="span4">
 		    <form class="form-horizontal">
-		    	<legend>Horizontal form</legend>
+		    	<legend>Horizontal form(conflict)</legend>
 		    	
 			    <div class="control-group">
 			    <label class="control-label" for="inputEmail">Email</label>
@@ -181,7 +181,7 @@
 			    </div>
     	</div>
     	<div class="span3">
-    		    <legend>Buttons instead of text</legend>
+    		    <legend>Buttons for text(conflict)</legend>
     		    <div class="input-append">
 				    <input class="span12" id="appendedInputButton" type="text">
 				    <button class="btn" type="button">Go!</button>
@@ -193,9 +193,9 @@
 				</div>
     	</div>
     	<div class="span3">
-    	<legend>Button dropdowns</legend>
+    	<legend>Button dropdowns(conflict)</legend>
     	    <div class="input-append">
-			    <input class="span2" id="appendedDropdownButton" type="text">
+			    <input class="span10" id="appendedDropdownButton" type="text">
 			    <div class="btn-group">
 			    <button class="btn dropdown-toggle" data-toggle="dropdown">
 			    Action
@@ -209,7 +209,113 @@
 			    </ul>
 			    </div>
 		    </div>
-
-    	</div>
+        </div>
+        <div class="span3">
+        <legend>Button dropdowns(conflict)</legend>
+            <div class="input-prepend">
+		    <div class="btn-group">
+		    <button class="btn dropdown-toggle" data-toggle="dropdown">
+		    Action
+		    <span class="caret"></span>
+		    </button>
+		    <ul class="dropdown-menu">
+		    option1<br />
+		    option2<br />
+		    option3<br />
+		    option4
+		    </ul>
+		    </div>
+		    <input class="span10" id="prependedDropdownButton" type="text">
+		    </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+    	<div class="span3">
+    		<legend>Button dropdowns(conflict)</legend>
+    		    <div class="input-prepend input-append">
+				    <div class="btn-group">
+				    <button class="btn dropdown-toggle" data-toggle="dropdown">
+				    Action
+				    <span class="caret"></span>
+				    </button>
+				    <ul class="dropdown-menu">
+				    <li>option1</li>
+				    <li>option2</li>
+				    </ul>
+				    </div>
+				    <input class="span5" id="appendedPrependedDropdownButton" type="text">
+				    <div class="btn-group">
+				    <button class="btn dropdown-toggle" data-toggle="dropdown">
+				    Action
+				    <span class="caret"></span>
+				    </button>
+				    <ul class="dropdown-menu">
+				    <li>option1</li>
+				    <li>option2</li>
+				    </ul>
+				    </div>
+				    </div>
+         </div>
+         <div class="span3">
+         	        <form class="form-search">
+         	        <legend>search form(conflict)</legend>
+				    <div class="input-append">
+				    <input type="text" class="span2 search-query">
+				    <button type="submit" class="btn">Search</button>
+				    </div>
+				    <div class="input-prepend">
+				    <button type="submit" class="btn">Search</button>
+				    <input type="text" class="span2 search-query">
+				    </div>
+				    </form>
+         </div>
+         <div class="span6">
+         	<legend>Control sizing(Relative sizing/Block level inputs)</legend>
+             	<input class="input-mini" type="text" placeholder=".input-mini"><br />
+			    <input class="input-small" type="text" placeholder=".input-small"><br />
+			    <input class="input-medium" type="text" placeholder=".input-medium"><br />
+			    <input class="input-large" type="text" placeholder=".input-large"><br />
+			    <input class="input-xlarge" type="text" placeholder=".input-xlarge"><br />
+			    <input class="input-xxlarge" type="text" placeholder=".input-xxlarge"><br />
+			    <input class="input-block-level" type="text" placeholder=".input-block-level">
+         </div>
+    </div>
+    <div class="row-fluid">
+      <div class="span3">
+      	<legend>Grid sizing</legend>
+      	    <input class="span3" type="text" placeholder=".span3"><br />
+		    <input class="span4" type="text" placeholder=".span4"><br />
+		    <input class="span5" type="text" placeholder=".span5"><br />
+		    <select class="span3"><br />
+		    <option>1</option>
+		    <option>2</option>
+		    <option>3</option>
+		    </select>
+		    <select class="span5"><br />
+		    <option>1</option>
+		    <option>2</option>
+		    <option>3</option>
+		    </select>
+		    <select class="span7">
+		    <option>1</option>
+		    <option>2</option>
+		    <option>3</option>
+		    </select>
+      </div>
+      <div class="span3">
+      	<legend>Grid sizing2</legend>
+      	<div class="controls">
+			<input class="span12" type="text" placeholder=".span12">
+			</div>
+			<div class="controls controls-row">
+			<input class="span8" type="text" placeholder=".span8">
+			<input class="span4" type="text" placeholder=".span4">
+			<div class="controls controls-row">
+			<input class="span4" type="text" placeholder=".span4">
+			<input class="span3" type="text" placeholder=".span3">
+			<input class="span5" type="text" placeholder=".span5">
+			</div>
+		</div>
+      </div>
     </div>
 </div>
