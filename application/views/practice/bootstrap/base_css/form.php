@@ -113,6 +113,8 @@
     	</div>
     	<div class="span3">
 		    <form class="form-search">
+		    <legend>search form</legend>
+
             <input type="text" class="input-medium search-query">
 		    <button type="submit" class="btn">Search</button>
             </form>
@@ -121,6 +123,8 @@
     <div class="row-fluid">
     	<div class="span5">
     		    <form class="form-inline">
+    		    	<legend>Inline form</legend>
+    		    	
 				    <input type="text" class="input-small" placeholder="Email">
 				    <input type="password" class="input-small" placeholder="Password">
 				    <label class="checkbox">
@@ -131,6 +135,8 @@
     	</div>
     	<div class="span4">
 		    <form class="form-horizontal">
+		    	<legend>Horizontal form</legend>
+		    	
 			    <div class="control-group">
 			    <label class="control-label" for="inputEmail">Email</label>
 			    <div class="controls">
@@ -152,6 +158,58 @@
 			    </div>
 			    </div>
 		    </form>
+    	</div>
+    	<div class="span3">
+    		<legend>Prepended and appended</legend>
+    		    <div class="input-prepend">
+				    <span class="add-on">@</span>
+				    <input class="span12" id="prependedInput" type="text" placeholder="Username">
+				    </div>
+				    <div class="input-append">
+				    <input class="span12" id="appendedInput" type="text">
+				    <span class="add-on">.00</span>
+				    </div>
+		    	</div>
+    </div>
+    <div class="row-fluid">
+    	<div class="span3">
+    		<legend>combined</legend>
+    		    <div class="input-prepend input-append">
+				    <span class="add-on">$</span>
+				    <input class="span12" id="appendedPrependedInput" type="text">
+				    <span class="add-on">.00</span>
+			    </div>
+    	</div>
+    	<div class="span3">
+    		    <legend>Buttons instead of text</legend>
+    		    <div class="input-append">
+				    <input class="span12" id="appendedInputButton" type="text">
+				    <button class="btn" type="button">Go!</button>
+			    </div>
+			        <div class="input-append">
+					    <input class="span6" id="appendedInputButtons" type="text">
+					    <button class="btn" type="button">Search</button>
+					    <button class="btn" type="button">Options</button>
+				</div>
+    	</div>
+    	<div class="span3">
+    	<legend>Button dropdowns</legend>
+    	    <div class="input-append">
+			    <input class="span2" id="appendedDropdownButton" type="text">
+			    <div class="btn-group">
+			    <button class="btn dropdown-toggle" data-toggle="dropdown">
+			    Action
+			    <span class="caret"></span>
+			    </button>
+			    <ul class="dropdown-menu">
+			    <li>button1</li>
+			    <li>button1</li>
+			    <hr />
+			    <li>button1</li>
+			    </ul>
+			    </div>
+		    </div>
+
     	</div>
     </div>
 </div>
