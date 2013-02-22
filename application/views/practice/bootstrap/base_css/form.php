@@ -116,7 +116,7 @@
 		    <legend>search form(conflict)</legend>
 
             <input type="text" class="input-medium search-query">
-		    <button type="submit" class="btn">Search</button>
+		    <button type="submit" class="btn ">Search</button>
             </form>
 		</div>
     </div>
@@ -184,7 +184,7 @@
     		    <legend>Buttons for text(conflict)</legend>
     		    <div class="input-append">
 				    <input class="span12" id="appendedInputButton" type="text">
-				    <button class="btn" type="button">Go!</button>
+				    <button class="btn btn-primary" type="button">Go!</button>
 			    </div>
 			        <div class="input-append">
 					    <input class="span6" id="appendedInputButtons" type="text">
@@ -194,7 +194,7 @@
     	</div>
     	<div class="span3">
     	<legend>Button dropdowns(conflict)</legend>
-    	    <div class="input-append">
+    	        <div class="input-append">
 			    <input class="span10" id="appendedDropdownButton" type="text">
 			    <div class="btn-group">
 			    <button class="btn dropdown-toggle" data-toggle="dropdown">
@@ -202,13 +202,14 @@
 			    <span class="caret"></span>
 			    </button>
 			    <ul class="dropdown-menu">
-			    <li>button1</li>
-			    <li>button1</li>
-			    <hr />
-			    <li>button1</li>
+			    <li><a href="#">Dropdown1</a></li>
+                <li><a href="#">Dropdown2</a></li>
+                <li><a href="#">Dropdown3</a></li>
+                <li><a href="#">Dropdown4</a></li>
+                <li><a href="#">Dropdown5</a></li>
 			    </ul>
 			    </div>
-		    </div>
+			    </div>
         </div>
         <div class="span3">
         <legend>Button dropdowns(conflict)</legend>
@@ -219,10 +220,11 @@
 		    <span class="caret"></span>
 		    </button>
 		    <ul class="dropdown-menu">
-		    option1<br />
-		    option2<br />
-		    option3<br />
-		    option4
+			    <li><a href="#">Dropdown1</a></li>
+                <li><a href="#">Dropdown2</a></li>
+                <li><a href="#">Dropdown3</a></li>
+                <li><a href="#">Dropdown4</a></li>
+                <li><a href="#">Dropdown5</a></li>
 		    </ul>
 		    </div>
 		    <input class="span10" id="prependedDropdownButton" type="text">
@@ -239,8 +241,9 @@
 				    <span class="caret"></span>
 				    </button>
 				    <ul class="dropdown-menu">
-				    <li>option1</li>
-				    <li>option2</li>
+					    <li><a href="#">Dropdown1</a></li>
+		                <li><a href="#">Dropdown2</a></li>
+		                <li><a href="#">Dropdown3</a></li>
 				    </ul>
 				    </div>
 				    <input class="span5" id="appendedPrependedDropdownButton" type="text">
@@ -250,8 +253,11 @@
 				    <span class="caret"></span>
 				    </button>
 				    <ul class="dropdown-menu">
-				    <li>option1</li>
-				    <li>option2</li>
+					    <li><a href="#">Dropdown1</a></li>
+		                <li><a href="#">Dropdown2</a></li>
+		                <li><a href="#">Dropdown3</a></li>
+		                <li><a href="#">Dropdown4</a></li>
+		                <li><a href="#">Dropdown5</a></li>
 				    </ul>
 				    </div>
 				    </div>

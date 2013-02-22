@@ -11,11 +11,13 @@
  <meta name="viewport" content="width=device-width">
 
  <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/bootstrap.min.css'); ?>">
+ <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/bootstrap-responsive.min.css'); ?>">
  <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/jq-ui/jquery-ui-1.10.0.custom.css'); ?>">
+ 
  <!--[if IE 7]>
  <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/jq-ui/jquery.ui.1.10.0.ie.css'); ?>">
  <![endif]-->
-
+ 
  
  
 
@@ -26,7 +28,7 @@
         }
 
     </style>
-<link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/main.css'); ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/theme.css'); ?>">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/custom.css'); ?>">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/style.css'); ?>">
         
