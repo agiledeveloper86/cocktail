@@ -184,7 +184,7 @@
     		    <legend>Buttons for text(conflict)</legend>
     		    <div class="input-append">
 				    <input class="span12" id="appendedInputButton" type="text">
-				    <button class="btn btn-primary" type="button">Go!</button>
+				    <button class="btn" type="button">Go!</button>
 			    </div>
 			        <div class="input-append">
 					    <input class="span6" id="appendedInputButtons" type="text">
@@ -266,12 +266,12 @@
          	        <form class="form-search">
          	        <legend>search form(conflict)</legend>
 				    <div class="input-append">
-				    <input type="text" class="span2 search-query">
+				    <input type="text" class="span10 search-query">
 				    <button type="submit" class="btn">Search</button>
 				    </div>
 				    <div class="input-prepend">
 				    <button type="submit" class="btn">Search</button>
-				    <input type="text" class="span2 search-query">
+				    <input type="text" class="span10 search-query">
 				    </div>
 				    </form>
          </div>
