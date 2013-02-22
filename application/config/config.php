@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/localapp/CI_bsp_jQ-ui_gcrud_ion-auth_dm/';
+$config['base_url']	= 'http://localhost/gitagileapp/cocktail/';
 
 /*
 |--------------------------------------------------------------------------

@@ -23,11 +23,11 @@
 
 3.resources=bootstrap+jQui+custom setup system
   resources/css-->bootstrap.min.css==bootstrap css
-               -->jq-ui==for jqui css
-               -->main.css==main custom css optimized by bootless(?bootless)
+               -->jq-ui==for jq-ui css
+               -->theme.css==main custom css optimized by bootless(?bootless)
                -->custom.css==optimized by custom.less
                -->style.css==last layer of custom css
- resourse/js/vendor=jQ.js+bootstrap.js+jQ-ui.js+modernizr
+ resourse/js/vendor=jQ.js+bootstrap.js+jQ-ui.js+conflict.js+modernizr
  resourse/js=plugins.js+scripts.js
  resources/img=bootsrap icon images
  resources/ico=apple touch icons+favicon
