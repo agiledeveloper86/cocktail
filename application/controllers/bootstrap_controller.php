@@ -51,5 +51,11 @@ class Bootstrap_controller extends CI_Controller {
 		$this->load->view('core_views/head_main.php');
 		$this->load->view('practice/bootstrap/base_css/img_icon.php');
 		$this->load->view('core_views/foot_main.php');
+	} 
+	public function dropdowns()
+	{
+		$this->load->view('core_views/head_main.php');
+		$this->load->view('practice/bootstrap/components/dropdowns.php');
+		$this->load->view('core_views/foot_main.php');
 	}	
 }
