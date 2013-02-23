@@ -1,7 +1,7 @@
 
 <div class="fluid-container"><div class="row-fluid"><h1 class="span4 offset4">Scaffolding</h1></div></div>
 <hr />
-<h3>Basic fluid grid</h3>
+<h3>Basic fluid grid(line 5)</h3>
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div class="span4">
@@ -27,7 +27,7 @@
 <hr />
 
 
-<h3>offset</h3>
+<h3>offset(line31)</h3>
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div class="span4 offset8">
@@ -38,7 +38,7 @@
 
 -<hr />
 
-<h3>nesting</h3>
+<h3>nesting(line41)</h3>
 <div class="container-fluid">
 
 	<div class="row-fluid">

@@ -3,7 +3,7 @@
 	<div class="row-fluid">
 		<div class="span4">
 			<table class="table">
-				<h3>table class(line3)</h3>
+				<h3>table class(line4)</h3>
 				<tr>
 					<th>#</th>
 					<th>category1</th>
@@ -26,7 +26,7 @@
 		</div>
 		<div class="span4">
 			<table class="table table-striped">
-				<h3>table table-striped class(line26)</h3>
+				<h3>table table-striped class(line27)</h3>
 				<tr>
 					<th>#</th>
 					<th>category1</th>
@@ -49,7 +49,7 @@
 		</div>
 		<div  class="span4">
 			<table class="table table-bordered">
-				<h3>table table-bordered class(line49)</h3>
+				<h3>table table-bordered class(line50)</h3>
 				<tr>
 					<th>#</th>
 					<th>category1</th>
@@ -69,12 +69,12 @@
 					<td>cell3*4</td>
 				</tr>
 			</table>
-		</div>
+		</div><!--row1################################################ -->
     </div>
     <div class="row-fluid">  
         <div  class="span4">
 			<table class="table table-hover" >
-				<h3>class table table-hover(line74)</h3>
+				<h3>class table table-hover(line75)</h3>
 				<tr>
 					<th>#</th>
 					<th>category1</th>
@@ -97,7 +97,7 @@
 		</div>
         <div  class="span4">
 			<table class="table table-condensed">
-				<h3>class table table-condensed(line97)</h3>
+				<h3>class table table-condensed(line98)</h3>
 				<tr>
 					<th>#</th>
 					<th>category1</th>
@@ -120,7 +120,7 @@
 		</div>
 		<div  class="span4">
 			<table class="table" >
-				<caption><h3>complete table(with row classes)(line116)</h3></caption>
+				<caption><h3>complete table(with row classes)(line121)</h3></caption>
 				<theader>
 					<th>#</th>
 					<th>category1</th>
@@ -154,8 +154,6 @@
 						</tr>
 				</tbody>
 			</table>
-		</div>
+		</div><!--row2################################################ -->
     </div>
-
-
 </div>

@@ -18,9 +18,11 @@
 			<thead><caption><h3>Twitter Bootsrap</h3></caption></thead>
 			<tbody>
 				<tr><td><a href="<?php echo base_url('bootstrap_controller/scaffolding');?>">Scaffolding</a></td></tr>
-				<tr><td><a href="<?php echo base_url('bootstrap_controller/typography');?>">Basic CSS-typography</a></td></tr>
-				<tr><td><a href="<?php echo base_url('bootstrap_controller/table');?>">Basic CSS-table</a></td></tr>
-				<tr><td><a href="<?php echo base_url('bootstrap_controller/form');?>">Basic CSS-form</a></td></tr>
+				<tr><td><a href="<?php echo base_url('bootstrap_controller/typography');?>">Base CSS-typography</a></td></tr>
+				<tr><td><a href="<?php echo base_url('bootstrap_controller/table');?>">Base CSS-table</a></td></tr>
+				<tr><td><a href="<?php echo base_url('bootstrap_controller/form');?>">Base CSS-form</a></td></tr>
+				<tr><td><a href="<?php echo base_url('bootstrap_controller/button');?>">Base CSS-button</a></td></tr>
+				<tr><td><a href="<?php echo base_url('bootstrap_controller/img_icon');?>">Base CSS-image icon</a></td></tr>
 			</tbody>
 		</table>
 	</div>
