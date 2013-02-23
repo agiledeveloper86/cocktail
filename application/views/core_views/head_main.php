@@ -60,6 +60,6 @@
 
 <div class="cotainer-fluid">
     <div class="row-fluid"> 
-        <div class="span4 offset5"><h2><a href="<?php echo base_url('practice_indexctrl'); ?>">HOME</a></h2></div>
+        <div class="span4 offset5"><h3><a href="<?php echo base_url('practice_indexctrl'); ?>">HOME</a></h3></div>
     </div>
 </div>

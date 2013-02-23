@@ -25,9 +25,10 @@
 
     </style>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/main.css'); ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/theme.css'); ?>">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/custom.css'); ?>">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/style.css'); ?>">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/bucky/bucky_css.css'); ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('practice/bucky/bucky_css.css'); ?>">
         
 
 <script src="<?php echo base_url('resources/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js'); ?>"></script>
@@ -53,8 +54,4 @@
 
         <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
 
-<div class="cotainer-fluid">
-    <div class="row-fluid"> 
-        <div class="span4 offset5"><h2><a href="<?php echo base_url('practice_indexctrl'); ?>">HOME</a></h2></div>
-    </div>
-</div>
+<div class="container-class"><div class="row-fluid"><div class="span2 offset5"><h3><a href="<?php echo base_url('practice_indexctrl'); ?>">HOME</a></h3></div></div></div>
