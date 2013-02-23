@@ -28,6 +28,8 @@
         }
 
     </style>
+
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/main.css'); ?>">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/theme.css'); ?>">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/custom.css'); ?>">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/style.css'); ?>">

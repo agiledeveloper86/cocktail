@@ -23,15 +23,17 @@
 
 3.resources=bootstrap+jQui+custom setup system
   resources/css-->bootstrap.min.css==bootstrap css
+               -->bootstrap-responsive.min.css==bootstrap responsive css
                -->jq-ui==for jqui css
-               -->main.css==main custom css optimized by bootless(?bootless)
+               -->main.css==optimized by main.less
+               -->theme.css==optimized by theme.less
                -->custom.css==optimized by custom.less
                -->style.css==last layer of custom css
- resourse/js/vendor=jQ.js+bootstrap.js+jQ-ui.js+modernizr
+ resourse/js/vendor=jQ.js+bootstrap.js+jQ-ui.js+modernizr+conflict.js
  resourse/js=plugins.js+scripts.js
  resources/img=bootsrap icon images
  resources/ico=apple touch icons+favicon
- resources/extra=(ion-auth+gcrud) sql file + dm-extra. 
+ resources/extra=ci_db.sql+(ion-auth+gcrud)sql file + dm-extra. 
 
 4.views/core(head_main+foot_main+body_main+body_min)==core views
 5.[site_controller] with view1 and min method where view1 is evocked by index method.[site_controller] is default route.
