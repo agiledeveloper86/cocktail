@@ -24,6 +24,7 @@
 				<tr><td><a href="<?php echo base_url('bootstrap_controller/button');?>">Base CSS-button</a></td></tr>
 				<tr><td><a href="<?php echo base_url('bootstrap_controller/img_icon');?>">Base CSS-image icon</a></td></tr>
 				<tr><td><a href="<?php echo base_url('bootstrap_controller/dropdowns');?>"><b>components-</b>dropdown menus, Button groups, Button dropdown menus</a></td></tr>
+				<tr><td><a href="<?php echo base_url('bootstrap_controller/navs');?>"><b>components-</b>Nav: tabs, pills, and lists</a></td></tr>
 				
 			</tbody>
 		</table>
