@@ -3,12 +3,12 @@
 <div class="container-fluid">
     <div class="row-fluid">
 		<div class="span4">
-			<legend>icon search(line3)</legend>
+			<legend>icon search(line5)</legend>
 			<i class="icon-search"></i>
 			<i class="icon-search icon-white"></i>
 		</div>
 		<div class="span4">
-			<legend>Button group in a button toolbar(line8)</legend>
+			<legend>Button group in a button toolbar(line10)</legend>
 			<div class="btn-toolbar">
 			    <div class="btn-group">
 				    <a class="btn" href="#"><i class="icon-align-left"></i></a>
@@ -19,7 +19,7 @@
 			</div>
 		</div>
 		<div class="span4">
-			<legend>Dropdown in a button group(line19)</legend>
+			<legend>Dropdown in a button group(line21)</legend>
 			    <div class="btn-group">
 				    <a class="btn btn-primary" href="#"><i class="icon-user icon-white"></i> User</a>
 				    <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
