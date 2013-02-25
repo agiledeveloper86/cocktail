@@ -104,11 +104,105 @@
 			    </ul>
 		</div>
 		<div class="span4">
-			<legend></legend>
+			<legend>Nav lists</legend>
+			    <ul class="nav nav-list">
+			    <li class="nav-header">List header</li>
+			    <li class="active"><a href="#">Home</a></li>
+			    <li><a href="#">Library</a></li>
+			    <li><a href="#">Application</a></li>
+			    <li class="nav-header">Another List header</li>
+			    <li><a href="#">Profile</a></li>
+			    <li><a href="#">Settings</a></li>
+			    <li class="divider"></li>
+			    <li><a href="#">help</a></li>
+			    </ul>
 		</div>
 		<div class="span4">
-			<legend></legend>
+			<legend>Tabbable nav</legend>
+			    <div class="tabbable"> <!-- Only required for left/right tabs -->
+			    <ul class="nav nav-tabs">
+			    <li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
+			    <li><a href="#tab2" data-toggle="tab">Section 2</a></li>
+			    <li><a href="#tab3" data-toggle="tab">Section 3</a></li>
+			    </ul>
+			    <div class="tab-content">
+			    <div class="tab-pane active" id="tab1">
+			    <p>I'm in Section 1.</p>
+			    </div>
+			    <div class="tab-pane" id="tab2">
+			    <p>Howdy, I'm in Section 2.</p>
+			    </div>
+			    <div class="tab-pane" id="tab3">
+			    <p>What up developer, this is Section 3.</p>
+			    </div>
+			    </div>
+			    </div>
 		</div>
-
-	</div>
+    </div>
+    <div class="row-fluid">
+    	<div class="span4">
+    		<legend>Tabs on the bottom</legend>
+    		    <div class="tabbable tabs-below">
+			    <div class="tab-content">
+			    <div class="tab-pane active" id="tab1a">
+			    <p>I'm in Section 1.</p>
+			    </div>
+			    <div class="tab-pane" id="tab2a">
+			    <p>Howdy, I'm in Section 2.</p>
+			    </div>
+			    <div class="tab-pane" id="tab3a">
+			    <p>What up developer, this is Section 3.</p>
+			    </div>
+			    </div>
+			    
+			    <ul class="nav nav-tabs">
+			    <li class="active"><a href="#tab1a" data-toggle="tab">Section 1</a></li>
+			    <li><a href="#tab2a" data-toggle="tab">Section 2</a></li>
+			    <li><a href="#tab3a" data-toggle="tab">Section 3</a></li>
+			    </ul>
+			    </div>
+    	</div>
+	    <div class="span4">
+    		<legend>Tabs on the left</legend>
+    		<div class="tabbable tabs-left">
+    			<ul class="nav nav-tabs">
+			    <li class="active"><a href="#tab1l" data-toggle="tab">Section 1</a></li>
+			    <li><a href="#tab2l" data-toggle="tab">Section 2</a></li>
+			    <li><a href="#tab3l" data-toggle="tab">Section 3</a></li>
+			    </ul>
+			    <div class="tab-content">
+				        <div class="tab-pane active" id="tab1l">
+					    <p>I'm in Section 1.</p>
+					    </div>
+					    <div class="tab-pane" id="tab2l">
+					    <p>Howdy, I'm in Section 2.</p>
+					    </div>
+					    <div class="tab-pane" id="tab3l">
+					    <p>What up developer, this is Section 3.</p>
+					    </div>
+				</div>
+			</div>
+		</div>
+	    <div class="span4">
+    		<legend>Tabs on the right</legend>
+    		<div class="tabbable tabs-right">
+    			<ul class="nav nav-tabs">
+			    <li class="active"><a href="#tab1r" data-toggle="tab">Section 1</a></li>
+			    <li><a href="#tab2r" data-toggle="tab">Section 2</a></li>
+			    <li><a href="#tab3r" data-toggle="tab">Section 3</a></li>
+			    </ul>
+			    <div class="tab-content">
+				        <div class="tab-pane active" id="tab1r">
+					    <p>I'm in Section 1.</p>
+					    </div>
+					    <div class="tab-pane" id="tab2r">
+					    <p>Howdy, I'm in Section 2.</p>
+					    </div>
+					    <div class="tab-pane" id="tab3r">
+					    <p>What up developer, this is Section 3.</p>
+					    </div>
+				</div>
+			</div>
+		</div>
+    </div>
 </div>
