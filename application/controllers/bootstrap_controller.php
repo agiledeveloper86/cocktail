@@ -59,10 +59,18 @@ class Bootstrap_controller extends CI_Controller {
 		$this->load->view('practice/bootstrap/components/dropdowns_buttongroups_buttondropdowns.php');
 		$this->load->view('core_views/foot_main.php');
 	}
+	
 	public function navs()
 	{
 		$this->load->view('core_views/head_main.php');
 		$this->load->view('practice/bootstrap/components/navs.php');
+		$this->load->view('core_views/foot_main.php');
+	}
+	
+	public function navbar()
+	{
+		$this->load->view('core_views/head_main.php');
+		$this->load->view('practice/bootstrap/components/navbar.php');
 		$this->load->view('core_views/foot_main.php');
 	}
 
