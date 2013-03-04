@@ -74,5 +74,12 @@ class Bootstrap_controller extends CI_Controller {
 		$this->load->view('core_views/foot_main.php');
 	}
 
+	public function pagination()
+	{
+		$this->load->view('core_views/head_main.php');
+		$this->load->view('practice/bootstrap/components/pagination.php');
+		$this->load->view('core_views/foot_main.php');
+	}
+
 	
 }

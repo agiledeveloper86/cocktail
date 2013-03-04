@@ -26,6 +26,7 @@
 				<tr><td><a href="<?php echo base_url('bootstrap_controller/dropdowns');?>"><b>components-</b>dropdown menus, Button groups, Button dropdown menus</a></td></tr>
 				<tr><td><a href="<?php echo base_url('bootstrap_controller/navs');?>"><b>components-</b>Nav: tabs, pills, and lists</a></td></tr>
 				<tr><td><a href="<?php echo base_url('bootstrap_controller/navbar');?>"><b>components-</b>Navbar</a></td></tr>
+				<tr><td><a href="<?php echo base_url('bootstrap_controller/pagination');?>"><b>components-</b>breadcrumb_pagination</a></td></tr>
 				
 			</tbody>
 		</table>
